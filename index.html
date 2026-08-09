@@ -1,0 +1,4263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maths Master | AP SSC 10th Maths</title>
+
+<style>
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    color:white;
+    background:
+    radial-gradient(circle at 10% 10%,rgba(37,99,235,.18),transparent 35%),
+    radial-gradient(circle at 90% 90%,rgba(124,58,237,.18),transparent 35%),
+    #050816;
+}
+
+button{
+    border:0;
+    cursor:pointer;
+    font-weight:700;
+    color:white;
+    transition:.25s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+.hidden{
+    display:none!important;
+}
+
+.screen,
+.page{
+    display:none;
+}
+
+.screen.active,
+.page.active{
+    display:block;
+}
+
+/* =========================================================
+   PREMIUM LOGIN
+========================================================= */
+
+.login-container{
+    width:min(92%,470px);
+    margin:auto;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.logo-area{
+    text-align:center;
+    margin-bottom:22px;
+}
+
+.logo-symbol{
+    width:70px;
+    height:70px;
+    margin:auto;
+    border-radius:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    font-weight:900;
+
+    background:
+    linear-gradient(135deg,#2563eb,#7c3aed);
+
+    box-shadow:
+    0 15px 40px rgba(37,99,235,.3);
+}
+
+.logo-area h1{
+    margin-top:14px;
+    font-size:26px;
+    letter-spacing:1px;
+}
+
+.logo-area span,
+.nav-logo span{
+    color:#60a5fa;
+}
+
+.login-card{
+    padding:40px 30px;
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.09),
+        rgba(255,255,255,.025)
+    );
+
+    border:1px solid rgba(255,255,255,.1);
+
+    backdrop-filter:blur(25px);
+
+    box-shadow:
+    0 30px 100px rgba(0,0,0,.45);
+}
+
+.welcome{
+    text-align:center;
+}
+
+.welcome-badge,
+.badge{
+    display:inline-block;
+    padding:8px 15px;
+    border-radius:50px;
+
+    background:rgba(96,165,250,.1);
+    border:1px solid rgba(96,165,250,.25);
+
+    color:#93c5fd;
+    font-size:12px;
+    margin-bottom:20px;
+}
+
+.welcome h2{
+    font-size:43px;
+    margin-bottom:15px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #fff,
+        #60a5fa,
+        #c084fc
+    );
+
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.welcome p,
+.description{
+    color:#94a3b8;
+    line-height:1.7;
+}
+
+.welcome p{
+    margin-bottom:30px;
+}
+
+.login-card h2{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.description{
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+.input-group label{
+    display:block;
+    font-size:13px;
+    color:#cbd5e1;
+    margin-bottom:8px;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:15px;
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    outline:none;
+
+    background:rgba(255,255,255,.05);
+
+    color:white;
+
+    font-size:15px;
+}
+
+textarea{
+    resize:vertical;
+    min-height:180px;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:#60a5fa;
+}
+
+.primary-btn{
+    width:100%;
+    padding:15px;
+    border-radius:14px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    box-shadow:
+    0 10px 30px rgba(37,99,235,.2);
+}
+
+.secondary-btn{
+    width:100%;
+    padding:14px;
+    margin-top:10px;
+
+    background:transparent;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:14px;
+
+    color:#94a3b8;
+}
+
+.message{
+    min-height:20px;
+    margin-top:13px;
+    text-align:center;
+    color:#f87171;
+    font-size:13px;
+}
+
+.password-rule{
+    margin:-7px 0 17px;
+    color:#64748b;
+    font-size:12px;
+}
+
+.login-footer{
+    text-align:center;
+    margin-top:18px;
+    color:#475569;
+    font-size:11px;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav{
+    height:72px;
+    padding:0 6%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:rgba(5,8,22,.82);
+
+    backdrop-filter:blur(22px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+}
+
+.nav-logo{
+    font-size:21px;
+    font-weight:900;
+    letter-spacing:.5px;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.nav-user{
+    color:#94a3b8;
+    font-size:13px;
+}
+
+.nav-home{
+    padding:9px 13px;
+    border-radius:10px;
+
+    background:rgba(255,255,255,.06);
+
+    color:#cbd5e1;
+
+    font-size:12px;
+}
+
+/* =========================================================
+   PREMIUM DASHBOARD
+========================================================= */
+
+.dashboard{
+    max-width:1150px;
+    margin:auto;
+    padding:65px 20px;
+}
+
+.dashboard-hero{
+    position:relative;
+    overflow:hidden;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(37,99,235,.16),
+        rgba(124,58,237,.13),
+        rgba(255,255,255,.03)
+    );
+
+    border:1px solid rgba(255,255,255,.1);
+
+    margin-bottom:30px;
+}
+
+.dashboard-hero::before{
+    content:"";
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    right:-70px;
+    top:-80px;
+
+    border-radius:50%;
+
+    background:rgba(96,165,250,.12);
+
+    filter:blur(10px);
+}
+
+.hero-small{
+    color:#93c5fd;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    margin-bottom:14px;
+}
+
+.dashboard-hero h1{
+    font-size:clamp(35px,6vw,58px);
+
+    background:
+    linear-gradient(
+        90deg,
+        #fff,
+        #60a5fa,
+        #c084fc
+    );
+
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.dashboard-hero p{
+    max-width:700px;
+    color:#94a3b8;
+    line-height:1.7;
+    margin-top:14px;
+}
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.premium-card{
+    position:relative;
+    overflow:hidden;
+
+    padding:30px;
+    min-height:230px;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.085),
+        rgba(255,255,255,.025)
+    );
+
+    border:1px solid rgba(255,255,255,.09);
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.12);
+}
+
+.premium-card:hover{
+    transform:translateY(-7px);
+
+    border-color:
+    rgba(96,165,250,.45);
+
+    box-shadow:
+    0 25px 60px rgba(37,99,235,.12);
+}
+
+.premium-card::after{
+    content:"";
+    position:absolute;
+
+    width:130px;
+    height:130px;
+
+    right:-60px;
+    bottom:-60px;
+
+    border-radius:50%;
+
+    background:rgba(96,165,250,.08);
+}
+
+.card-icon{
+    font-size:42px;
+    margin-bottom:22px;
+}
+
+.premium-card h2{
+    font-size:21px;
+    margin-bottom:10px;
+}
+
+.premium-card p{
+    color:#94a3b8;
+    line-height:1.6;
+    font-size:14px;
+    max-width:400px;
+}
+
+.card-arrow{
+    position:absolute;
+    right:25px;
+    bottom:25px;
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:13px;
+
+    background:rgba(96,165,250,.1);
+
+    color:#60a5fa;
+
+    font-size:20px;
+}
+
+.exit{
+    width:100%;
+    margin-top:22px;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    background:rgba(248,113,113,.05);
+
+    border:1px solid rgba(248,113,113,.18);
+
+    color:#fca5a5;
+}
+
+/* =========================================================
+   LIGHT PREMIUM PAGES
+========================================================= */
+
+.light-page{
+    min-height:calc(100vh - 72px);
+
+    background:
+    radial-gradient(
+        circle at 10% 0%,
+        rgba(37,99,235,.08),
+        transparent 30%
+    ),
+
+    linear-gradient(
+        135deg,
+        #f8fafc,
+        #eef4f8
+    );
+
+    color:#172033;
+
+    padding-bottom:80px;
+}
+
+.page-container{
+    max-width:1100px;
+    margin:auto;
+    padding:55px 20px;
+}
+
+.page-header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.page-label{
+    display:inline-block;
+
+    padding:8px 15px;
+
+    border-radius:50px;
+
+    background:#eff6ff;
+
+    border:1px solid #bfdbfe;
+
+    color:#1d4ed8;
+
+    font-size:12px;
+    font-weight:800;
+
+    margin-bottom:15px;
+}
+
+.page-header h1{
+    font-size:clamp(34px,6vw,56px);
+    color:#172554;
+    margin-bottom:12px;
+}
+
+.page-header p{
+    max-width:700px;
+    margin:auto;
+
+    color:#64748b;
+
+    line-height:1.7;
+}
+
+/* =========================================================
+   PREMIUM CHAPTER LIST
+========================================================= */
+
+.chapter-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.chapter-card{
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.88);
+
+    border:1px solid #e2e8f0;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:
+    0 8px 25px rgba(15,23,42,.04);
+}
+
+.chapter-card:hover{
+    transform:translateY(-4px);
+
+    border-color:#93c5fd;
+
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.1);
+}
+
+.chapter-number{
+    width:48px;
+    height:48px;
+
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #eff6ff,
+        #eef2ff
+    );
+
+    color:#1d4ed8;
+
+    font-weight:900;
+}
+
+.chapter-info{
+    flex:1;
+}
+
+.chapter-info h3{
+    color:#172554;
+    font-size:15px;
+    line-height:1.4;
+}
+
+.chapter-info span{
+    display:block;
+
+    margin-top:5px;
+
+    color:#64748b;
+
+    font-size:12px;
+}
+
+.chapter-arrow{
+    color:#2563eb;
+    font-size:20px;
+}
+
+/* =========================================================
+   PREMIUM SECTION
+========================================================= */
+
+.section-card{
+    background:white;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:25px;
+
+    padding:28px;
+
+    margin-bottom:18px;
+
+    box-shadow:
+    0 10px 30px rgba(15,23,42,.05);
+}
+
+.section-card h2{
+    color:#172554;
+    margin-bottom:15px;
+}
+
+.section-card p,
+.section-card li{
+    color:#475569;
+    line-height:1.8;
+}
+
+.section-card ul{
+    padding-left:22px;
+}
+
+.question-card{
+    padding:20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f8fafc,
+        #ffffff
+    );
+
+    border:1px solid #e2e8f0;
+
+    border-radius:18px;
+
+    margin-bottom:12px;
+
+    transition:.2s;
+}
+
+.question-card:hover{
+    border-color:#bfdbfe;
+    transform:translateX(3px);
+}
+
+.question-number{
+    display:inline-flex;
+
+    width:30px;
+    height:30px;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:9px;
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    font-weight:900;
+
+    margin-right:8px;
+}
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-button{
+    width:100%;
+
+    padding:15px;
+
+    margin-top:25px;
+
+    border-radius:14px;
+
+    background:white;
+
+    border:1px solid #e2e8f0;
+
+    color:#172554;
+
+    box-shadow:
+    0 5px 20px rgba(15,23,42,.04);
+}
+
+/* =========================================================
+   SSC PREMIUM
+========================================================= */
+
+.stats-row{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:18px;
+
+    margin-bottom:25px;
+}
+
+.stat-card{
+    padding:25px;
+
+    border-radius:22px;
+
+    background:white;
+
+    border:1px solid #e2e8f0;
+
+    box-shadow:
+    0 10px 30px rgba(15,23,42,.05);
+
+    text-align:center;
+}
+
+.stat-card span{
+    color:#64748b;
+    font-size:12px;
+    font-weight:700;
+}
+
+.stat-card strong{
+    display:block;
+
+    color:#172554;
+
+    font-size:34px;
+
+    margin-top:8px;
+}
+
+.marks-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:16px;
+}
+
+.marks-card{
+    padding:22px;
+
+    border-radius:20px;
+
+    background:white;
+
+    border:1px solid #e2e8f0;
+
+    box-shadow:
+    0 8px 25px rgba(15,23,42,.04);
+}
+
+.marks-top{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    margin-bottom:15px;
+}
+
+.marks-top h3{
+    color:#172554;
+
+    font-size:15px;
+
+    line-height:1.4;
+}
+
+.marks-value{
+    white-space:nowrap;
+
+    padding:6px 10px;
+
+    border-radius:9px;
+
+    background:#ecfdf5;
+
+    color:#047857;
+
+    font-size:12px;
+
+    font-weight:800;
+}
+
+.marks-bar{
+    height:8px;
+
+    background:#e2e8f0;
+
+    border-radius:50px;
+
+    overflow:hidden;
+}
+
+.marks-fill{
+    height:100%;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    );
+}
+
+/* =========================================================
+   INTERNAL CHOICE
+========================================================= */
+
+.choice-card{
+    background:white;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:22px;
+
+    padding:22px;
+
+    margin-bottom:15px;
+
+    box-shadow:
+    0 8px 25px rgba(15,23,42,.04);
+}
+
+.choice-header{
+    display:flex;
+    justify-content:space-between;
+
+    margin-bottom:15px;
+}
+
+.choice-header strong{
+    color:#172554;
+}
+
+.choice-mark{
+    padding:6px 10px;
+
+    background:#172554;
+
+    color:white;
+
+    border-radius:8px;
+
+    font-size:11px;
+}
+
+.choice-options{
+    display:grid;
+
+    grid-template-columns:
+    1fr 50px 1fr;
+
+    gap:12px;
+
+    align-items:center;
+}
+
+.choice-option{
+    padding:18px;
+
+    min-height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    font-weight:800;
+}
+
+.option-a{
+    background:#eff6ff;
+    color:#1d4ed8;
+    border:1px solid #bfdbfe;
+}
+
+.option-b{
+    background:#ecfdf5;
+    color:#047857;
+    border:1px solid #a7f3d0;
+}
+
+.or{
+    width:40px;
+    height:40px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#f1f5f9;
+
+    color:#64748b;
+
+    font-size:11px;
+
+    font-weight:900;
+}
+
+/* =========================================================
+   LESSON MENU
+========================================================= */
+
+.lesson-menu{
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
+}
+
+.lesson-option{
+    padding:30px;
+
+    min-height:190px;
+
+    background:white;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:24px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:
+    0 10px 30px rgba(15,23,42,.05);
+}
+
+.lesson-option:hover{
+    transform:translateY(-5px);
+
+    border-color:#93c5fd;
+}
+
+.lesson-option-icon{
+    font-size:38px;
+
+    margin-bottom:18px;
+}
+
+.lesson-option h2{
+    color:#172554;
+
+    font-size:19px;
+
+    margin-bottom:8px;
+}
+
+.lesson-option p{
+    color:#64748b;
+
+    line-height:1.6;
+
+    font-size:14px;
+}
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+.quiz-wrapper{
+    max-width:800px;
+    margin:auto;
+}
+
+.quiz-top{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:18px;
+}
+
+.quiz-progress-text{
+    color:#64748b;
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+.quiz-score{
+    padding:8px 12px;
+
+    border-radius:10px;
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    font-size:12px;
+
+    font-weight:800;
+}
+
+.quiz-progress{
+    height:9px;
+
+    background:#e2e8f0;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin-bottom:22px;
+}
+
+.quiz-progress-fill{
+    height:100%;
+
+    width:0%;
+
+    background:
+    linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    transition:.3s;
+}
+
+.quiz-card{
+    background:white;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    box-shadow:
+    0 12px 35px rgba(15,23,42,.06);
+}
+
+.quiz-question-number{
+    color:#2563eb;
+
+    font-size:12px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    margin-bottom:12px;
+}
+
+.quiz-question{
+    color:#172554;
+
+    font-size:21px;
+
+    line-height:1.5;
+
+    margin-bottom:22px;
+}
+
+.quiz-options{
+    display:grid;
+
+    gap:12px;
+}
+
+.quiz-option{
+    width:100%;
+
+    padding:17px;
+
+    border-radius:15px;
+
+    background:#f8fafc;
+
+    border:1px solid #e2e8f0;
+
+    color:#334155;
+
+    text-align:left;
+
+    font-weight:700;
+}
+
+.quiz-option:hover{
+    background:#eff6ff;
+
+    border-color:#93c5fd;
+
+    color:#1d4ed8;
+
+    transform:none;
+}
+
+.quiz-option.correct{
+    background:#ecfdf5;
+
+    border-color:#6ee7b7;
+
+    color:#047857;
+}
+
+.quiz-option.wrong{
+    background:#fef2f2;
+
+    border-color:#fca5a5;
+
+    color:#dc2626;
+}
+
+.quiz-next{
+    width:100%;
+
+    padding:15px;
+
+    margin-top:20px;
+
+    border-radius:14px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+}
+
+.quiz-result{
+    text-align:center;
+
+    padding:40px 25px;
+}
+
+.result-icon{
+    font-size:65px;
+
+    margin-bottom:15px;
+}
+
+.quiz-result h2{
+    color:#172554;
+
+    font-size:32px;
+
+    margin-bottom:10px;
+}
+
+.result-score{
+    font-size:70px;
+
+    color:#2563eb;
+
+    font-weight:900;
+
+    margin:15px;
+}
+
+.result-message{
+    color:#64748b;
+
+    line-height:1.7;
+}
+
+/* =========================================================
+   NOTEBOOK
+========================================================= */
+
+.notebook-layout{
+    display:grid;
+
+    grid-template-columns:
+    360px 1fr;
+
+    gap:20px;
+}
+
+.notebook-panel,
+.notes-panel{
+    background:white;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    box-shadow:
+    0 10px 30px rgba(15,23,42,.05);
+}
+
+.notebook-panel h2,
+.notes-panel h2{
+    color:#172554;
+
+    margin-bottom:15px;
+}
+
+.note-title{
+    width:100%;
+
+    color:#172033;
+
+    background:#f8fafc;
+
+    border:1px solid #e2e8f0;
+
+    margin-bottom:12px;
+}
+
+.note-body{
+    width:100%;
+
+    color:#172033;
+
+    background:#f8fafc;
+
+    border:1px solid #e2e8f0;
+
+    margin-bottom:12px;
+}
+
+.save-note{
+    width:100%;
+
+    padding:14px;
+
+    border-radius:13px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+}
+
+.notes-list{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+}
+
+.saved-note{
+    padding:18px;
+
+    border-radius:18px;
+
+    background:#f8fafc;
+
+    border:1px solid #e2e8f0;
+}
+
+.saved-note h3{
+    color:#172554;
+
+    margin-bottom:7px;
+}
+
+.saved-note p{
+    color:#64748b;
+
+    line-height:1.6;
+
+    white-space:pre-wrap;
+}
+
+.note-actions{
+    display:flex;
+
+    justify-content:flex-end;
+
+    margin-top:12px;
+}
+
+.delete-note{
+    padding:8px 12px;
+
+    border-radius:9px;
+
+    background:#fef2f2;
+
+    color:#dc2626;
+
+    border:1px solid #fecaca;
+
+    font-size:12px;
+}
+
+/* =========================================================
+   PREMIUM EMPTY
+========================================================= */
+
+.empty{
+    text-align:center;
+
+    padding:40px;
+
+    color:#64748b;
+}
+
+.empty-icon{
+    font-size:50px;
+
+    margin-bottom:12px;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:750px){
+
+    nav{
+        padding:0 4%;
+    }
+
+    .nav-user{
+        display:none;
+    }
+
+    .dashboard{
+        padding:35px 14px;
+    }
+
+    .dashboard-hero{
+        padding:30px 22px;
+    }
+
+    .dashboard-grid,
+    .chapter-grid,
+    .marks-grid,
+    .lesson-menu,
+    .stats-row,
+    .notebook-layout{
+        grid-template-columns:1fr;
+    }
+
+    .page-container{
+        padding:40px 14px;
+    }
+
+    .choice-options{
+        grid-template-columns:1fr;
+    }
+
+    .or{
+        margin:auto;
+    }
+
+    .quiz-card{
+        padding:22px;
+    }
+
+    .quiz-question{
+        font-size:18px;
+    }
+
+    .login-card{
+        padding:30px 22px;
+    }
+
+    .welcome h2{
+        font-size:36px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+LOGIN SYSTEM
+========================================================= -->
+
+<div id="loginSystem">
+
+<div class="login-container">
+
+<div class="logo-area">
+
+<div class="logo-symbol">∑</div>
+
+<h1>
+MATHS<span>MASTER</span>
+</h1>
+
+</div>
+
+<div class="login-card">
+
+<!-- WELCOME -->
+
+<div id="welcomeScreen" class="screen active welcome">
+
+<div class="welcome-badge">
+🎓 AP SSC 10TH MATHEMATICS
+</div>
+
+<h2>WELCOME</h2>
+
+<p>
+Your premium personal mathematics learning space.
+Master concepts, key points, important questions,
+quizzes and examination preparation.
+</p>
+
+<button class="primary-btn" onclick="showNameScreen()">
+🚀 GET STARTED
+</button>
+
+</div>
+
+
+<!-- NAME -->
+
+<div id="nameScreen" class="screen">
+
+<h2>What's your name?</h2>
+
+<p class="description">
+Enter your name to continue to Maths Master.
+</p>
+
+<div class="input-group">
+
+<label>Your Name</label>
+
+<input
+id="nameInput"
+type="text"
+placeholder="Enter your name"
+>
+
+</div>
+
+<button class="primary-btn" onclick="checkName()">
+CONTINUE →
+</button>
+
+<div id="nameMessage" class="message"></div>
+
+<button
+class="secondary-btn"
+onclick="showScreen('welcomeScreen')"
+>
+← BACK
+</button>
+
+</div>
+
+
+<!-- CREATE -->
+
+<div id="createPasswordScreen" class="screen">
+
+<h2>
+Welcome,
+<span id="newUserName"></span> 👋
+</h2>
+
+<p class="description">
+Create your Maths Master password.
+</p>
+
+<div class="input-group">
+
+<label>Create Password</label>
+
+<input
+id="createPassword"
+type="password"
+placeholder="Create password"
+>
+
+</div>
+
+<div class="input-group">
+
+<label>Confirm Password</label>
+
+<input
+id="confirmPassword"
+type="password"
+placeholder="Confirm password"
+>
+
+</div>
+
+<div class="password-rule">
+🔐 Password must contain at least 4 characters.
+</div>
+
+<button
+class="primary-btn"
+onclick="createAccount()"
+>
+CREATE ACCOUNT →
+</button>
+
+<div id="createMessage" class="message"></div>
+
+<button
+class="secondary-btn"
+onclick="showScreen('nameScreen')"
+>
+← BACK
+</button>
+
+</div>
+
+
+<!-- LOGIN -->
+
+<div id="loginScreen" class="screen">
+
+<h2>Welcome back 👋</h2>
+
+<p class="description">
+Enter your password to continue.
+</p>
+
+<div class="input-group">
+
+<label>Name</label>
+
+<input
+id="loginName"
+type="text"
+readonly
+>
+
+</div>
+
+<div class="input-group">
+
+<label>Password</label>
+
+<input
+id="loginPassword"
+type="password"
+placeholder="Enter password"
+>
+
+</div>
+
+<button
+class="primary-btn"
+onclick="loginUser()"
+>
+LOGIN →
+</button>
+
+<div id="loginMessage" class="message"></div>
+
+<button
+class="secondary-btn"
+onclick="showScreen('nameScreen')"
+>
+← USE ANOTHER NAME
+</button>
+
+</div>
+
+
+<!-- SUCCESS -->
+
+<div id="successScreen" class="screen welcome">
+
+<div class="welcome-badge">
+✅ LOGIN SUCCESSFUL
+</div>
+
+<h2>You're In!</h2>
+
+<p>
+Your premium Maths Master dashboard is ready.
+</p>
+
+<button
+class="primary-btn"
+onclick="enterWebsite()"
+>
+📚 ENTER MATHS MASTER
+</button>
+
+</div>
+
+</div>
+
+<div class="login-footer">
+© 2026 Maths Master<br>
+<strong>Design by G.V Karthhik</strong>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================================================
+MAIN WEBSITE
+========================================================= -->
+
+<div id="mainWebsite" class="hidden">
+
+<nav>
+
+<div class="nav-logo">
+MATHS<span>MASTER</span>
+</div>
+
+<div class="nav-right">
+
+<div class="nav-user">
+👤 <span id="username">Student</span>
+</div>
+
+<button class="nav-home" onclick="goDashboard()">
+HOME
+</button>
+
+</div>
+
+</nav>
+
+
+<!-- =========================================================
+DASHBOARD
+========================================================= -->
+
+<section id="dashboardPage" class="page active">
+
+<div class="dashboard">
+
+<div class="dashboard-hero">
+
+<div class="hero-small">
+PREMIUM STUDENT LEARNING SYSTEM
+</div>
+
+<h1>
+Welcome back, <span id="heroUsername">Student</span> 👋
+</h1>
+
+<p>
+Prepare smarter for AP SSC 10th Class Mathematics
+with chapter-wise marks analysis, key points,
+important questions, quizzes and your own digital notebook.
+</p>
+
+</div>
+
+
+<div class="dashboard-grid">
+
+
+<div
+class="premium-card"
+onclick="openMainPage('lessonKeyPointsPage')"
+>
+
+<div class="card-icon">
+📖
+</div>
+
+<h2>
+KEY POINTS & IMPORTANT QUESTIONS
+</h2>
+
+<p>
+Open every chapter and study important concepts,
+formulas and high-priority SSC questions.
+</p>
+
+<div class="card-arrow">→</div>
+
+</div>
+
+
+<div
+class="premium-card"
+onclick="openMainPage('sscPage')"
+>
+
+<div class="card-icon">
+🎯
+</div>
+
+<h2>
+SSC EXAMINATION
+</h2>
+
+<p>
+Explore chapter-wise marks, examination strategy
+and internal-choice preparation.
+</p>
+
+<div class="card-arrow">→</div>
+
+</div>
+
+
+<div
+class="premium-card"
+onclick="openQuizChapterPage()"
+>
+
+<div class="card-icon">
+🧠
+</div>
+
+<h2>
+CHAPTER-WISE QUIZ
+</h2>
+
+<p>
+Take 10-question quizzes and test your preparation
+chapter by chapter.
+</p>
+
+<div class="card-arrow">→</div>
+
+</div>
+
+
+<div
+class="premium-card"
+onclick="openMainPage('notebookPage')"
+>
+
+<div class="card-icon">
+📓
+</div>
+
+<h2>
+MY DIGITAL NOTEBOOK
+</h2>
+
+<p>
+Write your formulas, doubts, revision notes and
+important points and save them permanently.
+</p>
+
+<div class="card-arrow">→</div>
+
+</div>
+
+
+</div>
+
+
+<button class="exit" onclick="logout()">
+🏠 EXIT TO HOME
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+KEY POINTS CHAPTERS
+========================================================= -->
+
+<section id="lessonKeyPointsPage" class="page light-page">
+
+<div class="page-container">
+
+<div class="page-header">
+
+<div class="page-label">
+📚 LESSON MASTER
+</div>
+
+<h1>
+Key Points & Questions
+</h1>
+
+<p>
+Select any chapter to explore premium revision notes,
+key concepts and important SSC questions.
+</p>
+
+</div>
+
+<div
+class="chapter-grid"
+id="keyChapterGrid"
+></div>
+
+<button
+class="back-button"
+onclick="goDashboard()"
+>
+← BACK TO DASHBOARD
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+SELECTED LESSON
+========================================================= -->
+
+<section id="selectedLessonPage" class="page light-page">
+
+<div class="page-container">
+
+<div class="page-header">
+
+<div class="page-label">
+📖 CHAPTER STUDY
+</div>
+
+<h1 id="selectedLessonTitle">
+Real Numbers
+</h1>
+
+<p>
+Choose your study mode.
+</p>
+
+</div>
+
+<div class="lesson-menu">
+
+<div
+class="lesson-option"
+onclick="showLessonContent('key')"
+>
+
+<div class="lesson-option-icon">
+💡
+</div>
+
+<h2>KEY POINTS</h2>
+
+<p>
+Important definitions, formulas, concepts and
+quick revision points.
+</p>
+
+</div>
+
+
+<div
+class="lesson-option"
+onclick="showLessonContent('important')"
+>
+
+<div class="lesson-option-icon">
+🔥
+</div>
+
+<h2>IMPORTANT QUESTIONS</h2>
+
+<p>
+Important practice questions for serious SSC preparation.
+</p>
+
+</div>
+
+</div>
+
+<button
+class="back-button"
+onclick="openMainPage('lessonKeyPointsPage')"
+>
+← BACK TO CHAPTERS
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+LESSON CONTENT
+========================================================= -->
+
+<section id="lessonContentPage" class="page light-page">
+
+<div class="page-container">
+
+<div class="page-header">
+
+<div class="page-label">
+📘 REVISION
+</div>
+
+<h1 id="contentTitle">
+Real Numbers
+</h1>
+
+<p id="contentSubtitle">
+Key Points
+</p>
+
+</div>
+
+<div id="contentArea"></div>
+
+<button
+class="back-button"
+onclick="openMainPage('selectedLessonPage')"
+>
+← BACK TO LESSON MENU
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+SSC PAGE
+========================================================= -->
+
+<section id="sscPage" class="page light-page">
+
+<div class="page-container">
+
+<div class="page-header">
+
+<div class="page-label">
+🎯 SSC EXAM MASTER
+</div>
+
+<h1>
+Examination Analysis
+</h1>
+
+<p>
+A premium view of chapter marks and preparation strategy.
+</p>
+
+</div>
+
+
+<div class="stats-row">
+
+<div class="stat-card">
+
+<span>
+TOTAL CHAPTERS
+</span>
+
+<strong>
+14
+</strong>
+
+</div>
+
+
+<div class="stat-card">
+
+<span>
+MAX MARKS SHOWN
+</span>
+
+<strong>
+13
+</strong>
+
+</div>
+
+
+<div class="stat-card">
+
+<span>
+TARGET
+</span>
+
+<strong>
+100
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="section-card">
+
+<h2>
+📊 Chapter-wise Marks
+</h2>
+
+<div
+class="marks-grid"
+id="marksGrid"
+></div>
+
+</div>
+
+
+<div class="section-card">
+
+<h2>
+🎯 Internal Choice Preparation
+</h2>
+
+<p>
+Use the following practice combinations as preparation
+guidance only. They are not an official or guaranteed
+prediction of the actual examination paper.
+</p>
+
+</div>
+
+<div id="choiceList"></div>
+
+
+<button
+class="back-button"
+onclick="goDashboard()"
+>
+← BACK TO DASHBOARD
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+QUIZ CHAPTER SELECTION
+========================================================= -->
+
+<section id="quizChapterPage" class="page light-page">
+
+<div class="page-container">
+
+<div class="page-header">
+
+<div class="page-label">
+🧠 QUIZ ARENA
+</div>
+
+<h1>
+Choose Your Chapter
+</h1>
+
+<p>
+Every chapter contains a 10-question practice quiz.
+</p>
+
+</div>
+
+<div
+class="chapter-grid"
+id="quizChapterGrid"
+></div>
+
+<button
+class="back-button"
+onclick="goDashboard()"
+>
+← BACK TO DASHBOARD
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+QUIZ
+========================================================= -->
+
+<section id="quizPage" class="page light-page">
+
+<div class="page-container">
+
+<div class="page-header">
+
+<div class="page-label">
+🧠 QUIZ ARENA
+</div>
+
+<h1 id="quizTitle">
+Chapter Quiz
+</h1>
+
+<p>
+Answer all 10 questions and check your score.
+</p>
+
+</div>
+
+<div class="quiz-wrapper">
+
+<div id="quizBox"></div>
+
+</div>
+
+<button
+class="back-button"
+onclick="openQuizChapterPage()"
+>
+← BACK TO CHAPTER QUIZZES
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+NOTEBOOK
+========================================================= -->
+
+<section id="notebookPage" class="page light-page">
+
+<div class="page-container">
+
+<div class="page-header">
+
+<div class="page-label">
+📓 DIGITAL NOTEBOOK
+</div>
+
+<h1>
+My Notebook
+</h1>
+
+<p>
+Create your own private revision notes.
+</p>
+
+</div>
+
+
+<div class="notebook-layout">
+
+
+<div class="notebook-panel">
+
+<h2>
+✍️ Write a Note
+</h2>
+
+<input
+id="noteTitle"
+class="note-title"
+placeholder="Note title"
+/>
+
+<textarea
+id="noteBody"
+class="note-body"
+placeholder="Write your Maths notes here..."
+></textarea>
+
+<button
+class="save-note"
+onclick="saveNote()"
+>
+💾 SAVE NOTE
+</button>
+
+</div>
+
+
+<div class="notes-panel">
+
+<h2>
+📚 Saved Notes
+</h2>
+
+<div
+id="notesList"
+class="notes-list"
+></div>
+
+</div>
+
+</div>
+
+
+<button
+class="back-button"
+onclick="goDashboard()"
+>
+← BACK TO DASHBOARD
+</button>
+
+</div>
+
+</section>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+CHAPTER DATA
+========================================================= */
+
+const chapters = [
+
+{
+name:"Real Numbers",
+marks:9,
+calculation:"1 + 8 = 9 marks"
+},
+
+{
+name:"Polynomials",
+marks:8,
+calculation:"1 + 1 + 2 + 4 = 8 marks"
+},
+
+{
+name:"Pair of Linear Equations in Two Variables",
+marks:9,
+calculation:"1 + 8 = 9 marks"
+},
+
+{
+name:"Quadratic Equations",
+marks:7,
+calculation:"1 + 2 + 4 = 7 marks"
+},
+
+{
+name:"Arithmetic Progressions",
+marks:13,
+calculation:"1 + 4 + 8 = 13 marks"
+},
+
+{
+name:"Triangles",
+marks:11,
+calculation:"1 + 2 + 8 = 11 marks"
+},
+
+{
+name:"Coordinate Geometry",
+marks:10,
+calculation:"2 + 8 = 10 marks"
+},
+
+{
+name:"Introduction to Trigonometry",
+marks:7,
+calculation:"1 + 2 + 4 = 7 marks"
+},
+
+{
+name:"Some Applications of Trigonometry",
+marks:11,
+calculation:"1 + 2 + 8 = 11 marks"
+},
+
+{
+name:"Circles",
+marks:7,
+calculation:"1 + 2 + 4 = 7 marks"
+},
+
+{
+name:"Areas Related to Circles",
+marks:8,
+calculation:"8 = 8 marks"
+},
+
+{
+name:"Surface Areas and Volumes",
+marks:7,
+calculation:"1 + 2 + 4 = 7 marks"
+},
+
+{
+name:"Statistics",
+marks:12,
+calculation:"4 + 8 = 12 marks"
+},
+
+{
+name:"Probability",
+marks:13,
+calculation:"1 + 4 + 8 = 13 marks"
+}
+
+];
+
+
+/* =========================================================
+LESSON CONTENT DATA
+========================================================= */
+
+const lessonData = {
+
+"Real Numbers":{
+key:[
+"Real numbers include both rational and irrational numbers.",
+"Rational numbers can be written in the form p/q, q ≠ 0.",
+"Irrational numbers cannot be expressed in p/q form.",
+"Every composite number can be expressed as a product of primes.",
+"Use prime factorisation to find HCF and LCM.",
+"Proof by contradiction is important for irrational-number proofs.",
+"√2, √3 and π are common examples of irrational numbers."
+],
+questions:[
+"Prove that √2 is irrational.",
+"Prove that √3 is irrational.",
+"Prove that 3 + √2 is irrational.",
+"Find HCF and LCM using prime factorisation.",
+"State and explain the Fundamental Theorem of Arithmetic.",
+"Find the HCF and LCM of two given numbers using prime factors.",
+"Prove that a given number is irrational.",
+"Express a composite number as a product of prime numbers.",
+"Use HCF × LCM = product of two positive integers.",
+"Explain the difference between rational and irrational numbers."
+]
+},
+
+"Polynomials":{
+key:[
+"Degree of a polynomial is the highest power of the variable.",
+"Zero of a polynomial is the value of x for which p(x)=0.",
+"For a quadratic polynomial ax²+bx+c, sum of zeros = -b/a.",
+"Product of zeros = c/a.",
+"Polynomial division is based on the division algorithm.",
+"Graphs can be used to identify zeros.",
+"Relationship between coefficients and zeros is very important."
+],
+questions:[
+"Find the zeros of a quadratic polynomial.",
+"Verify the relationship between zeros and coefficients.",
+"Find a polynomial when its zeros are given.",
+"Find the sum and product of zeros.",
+"Divide one polynomial by another.",
+"Find the value of an unknown coefficient.",
+"Form a quadratic polynomial from given zeros.",
+"Verify the division algorithm.",
+"Determine the number of zeros from a graph.",
+"Solve a problem involving zeroes and coefficients."
+]
+},
+
+"Pair of Linear Equations in Two Variables":{
+key:[
+"A linear equation in two variables has the form ax+by+c=0.",
+"A pair can have one solution, no solution or infinitely many solutions.",
+"Graphical method represents equations as straight lines.",
+"Unique solution occurs when lines intersect.",
+"No solution occurs when lines are parallel.",
+"Infinitely many solutions occur when lines coincide.",
+"Substitution and elimination methods are important."
+],
+questions:[
+"Solve a pair using substitution.",
+"Solve using elimination.",
+"Solve using graphical method.",
+"Find the value of an unknown parameter.",
+"Determine whether a pair has a unique solution.",
+"Determine whether a pair has no solution.",
+"Determine whether a pair has infinitely many solutions.",
+"Form equations from a word problem.",
+"Solve a mixture problem.",
+"Solve an age-related problem."
+]
+},
+
+"Quadratic Equations":{
+key:[
+"A quadratic equation has the form ax²+bx+c=0.",
+"Here a ≠ 0.",
+"Quadratic equations can be solved by factorisation.",
+"Completing the square is another method.",
+"Quadratic formula is x=(-b±√(b²-4ac))/2a.",
+"Discriminant is b²-4ac.",
+"Discriminant determines the nature of roots."
+],
+questions:[
+"Solve a quadratic equation by factorisation.",
+"Solve using the quadratic formula.",
+"Find the discriminant.",
+"Determine the nature of roots.",
+"Find an unknown value for equal roots.",
+"Form a quadratic equation from given roots.",
+"Solve a word problem using quadratic equations.",
+"Use completing the square.",
+"Find the sum and product of roots.",
+"Verify the obtained roots."
+]
+},
+
+"Arithmetic Progressions":{
+key:[
+"An arithmetic progression has a common difference.",
+"nth term is a+(n-1)d.",
+"Sum of first n terms is n/2[2a+(n-1)d].",
+"Common difference is found by subtracting consecutive terms.",
+"Identify whether a sequence is an AP.",
+"Find missing terms using AP formulas.",
+"Word problems involving AP are important."
+],
+questions:[
+"Find the nth term of an AP.",
+"Find the common difference.",
+"Find the sum of first n terms.",
+"Find a missing term.",
+"Find the number of terms.",
+"Find the last term.",
+"Find the sum when first and last terms are given.",
+"Solve a word problem based on AP.",
+"Find whether a sequence is an AP.",
+"Find the middle term of an AP."
+]
+},
+
+"Triangles":{
+key:[
+"Similarity of triangles is a major concept.",
+"AA, SAS and SSS are important similarity criteria.",
+"Corresponding sides of similar triangles are proportional.",
+"Basic proportionality theorem is important.",
+"Pythagoras theorem is frequently used.",
+"Understand converse of Pythagoras theorem.",
+"Proof-based questions are important."
+],
+questions:[
+"Prove two triangles are similar.",
+"Use AA similarity criterion.",
+"Use SAS similarity criterion.",
+"Use SSS similarity criterion.",
+"Apply the Basic Proportionality Theorem.",
+"Prove a proportionality result.",
+"Apply Pythagoras theorem.",
+"Use the converse of Pythagoras theorem.",
+"Find an unknown side using similar triangles.",
+"Prove a theorem related to triangles."
+]
+},
+
+"Coordinate Geometry":{
+key:[
+"Distance formula is √[(x₂-x₁)²+(y₂-y₁)²].",
+"Midpoint formula is ((x₁+x₂)/2,(y₁+y₂)/2).",
+"Section formula divides a line segment in a given ratio.",
+"Coordinates are written as (x,y).",
+"Understand signs in different quadrants.",
+"Distance and midpoint problems are important."
+],
+questions:[
+"Find distance between two points.",
+"Find midpoint of a line segment.",
+"Use section formula.",
+"Find a point dividing a segment in a given ratio.",
+"Prove three points are collinear.",
+"Find the coordinates of a missing point.",
+"Find the distance from origin.",
+"Apply coordinate geometry to a triangle.",
+"Find a ratio using section formula.",
+"Find the midpoint and verify distances."
+]
+},
+
+"Introduction to Trigonometry":{
+key:[
+"Trigonometric ratios are sin, cos and tan.",
+"sin θ = perpendicular/hypotenuse.",
+"cos θ = base/hypotenuse.",
+"tan θ = perpendicular/base.",
+"Reciprocal ratios include cosec, sec and cot.",
+"Use standard values of 0°,30°,45°,60°,90°.",
+"Trigonometric identities must be memorised."
+],
+questions:[
+"Find trigonometric ratios from a right triangle.",
+"Evaluate standard trigonometric values.",
+"Prove a trigonometric identity.",
+"Find sin θ when cos θ is given.",
+"Find tan θ using sin and cos.",
+"Solve a simple trigonometric expression.",
+"Use complementary angle relationships.",
+"Find missing side using a trigonometric ratio.",
+"Evaluate a standard-angle expression.",
+"Verify a trigonometric identity."
+]
+},
+
+"Some Applications of Trigonometry":{
+key:[
+"Applications mainly involve heights and distances.",
+"Angles of elevation and depression are important.",
+"Draw a clear right-triangle diagram.",
+"Choose the correct trigonometric ratio.",
+"Use tan frequently for height-distance problems.",
+"Keep units consistent.",
+"Read the question carefully before forming the triangle."
+],
+questions:[
+"Find height using angle of elevation.",
+"Find distance from a tower.",
+"Solve an angle of depression problem.",
+"Find height of a building.",
+"Find length of a shadow.",
+"Find distance between two objects.",
+"Draw and interpret a height-distance diagram.",
+"Use tan in an application problem.",
+"Solve a two-step height problem.",
+"Find an unknown angle."
+]
+},
+
+"Circles":{
+key:[
+"Tangent touches a circle at exactly one point.",
+"Radius through point of contact is perpendicular to tangent.",
+"Tangents drawn from an external point are equal.",
+"Understand tangent properties.",
+"Use theorems carefully in proofs.",
+"Diagram construction is important."
+],
+questions:[
+"Prove radius is perpendicular to tangent.",
+"Prove tangents from an external point are equal.",
+"Find tangent length.",
+"Use tangent-radius theorem.",
+"Prove a circle-related result.",
+"Find an unknown angle.",
+"Apply tangent properties.",
+"Construct a tangent-related proof.",
+"Solve a numerical tangent problem.",
+"Use equal tangent lengths."
+]
+},
+
+"Areas Related to Circles":{
+key:[
+"Area of circle is πr².",
+"Circumference is 2πr.",
+"Area of sector is θ/360 × πr².",
+"Length of arc is θ/360 × 2πr.",
+"Use correct units.",
+"Segment and sector problems require careful diagrams."
+],
+questions:[
+"Find area of a circle.",
+"Find circumference.",
+"Find area of a sector.",
+"Find arc length.",
+"Find area of a shaded region.",
+"Find radius from area.",
+"Find area of a semicircle.",
+"Solve a sector word problem.",
+"Calculate perimeter of a sector.",
+"Solve a combined-shape problem."
+]
+},
+
+"Surface Areas and Volumes":{
+key:[
+"Know formulas for cube, cuboid, cylinder, cone and sphere.",
+"Total surface area includes all required surfaces.",
+"Curved surface area excludes bases.",
+"Volume measures space occupied.",
+"Keep units consistent.",
+"Conversion between cm³ and litres may be required."
+],
+questions:[
+"Find TSA of a cuboid.",
+"Find volume of a cylinder.",
+"Find CSA of a cylinder.",
+"Find volume of a cone.",
+"Find surface area of a sphere.",
+"Find volume of a sphere.",
+"Solve a combination-of-solids problem.",
+"Find missing radius or height.",
+"Convert units in a volume problem.",
+"Solve a real-life volume problem."
+]
+},
+
+"Statistics":{
+key:[
+"Mean, median and mode are measures of central tendency.",
+"For grouped data, use appropriate formulas.",
+"Cumulative frequency is important for median.",
+"Class intervals must be handled carefully.",
+"Use assumed mean or step-deviation when appropriate.",
+"Check calculations carefully."
+],
+questions:[
+"Find mean of grouped data.",
+"Find median.",
+"Find mode.",
+"Find missing frequency.",
+"Use assumed mean method.",
+"Use step-deviation method.",
+"Construct cumulative frequency.",
+"Find median class.",
+"Find modal class.",
+"Solve a statistics word problem."
+]
+},
+
+"Probability":{
+key:[
+"Probability measures the chance of an event.",
+"P(E)=favourable outcomes/total outcomes.",
+"Probability lies between 0 and 1.",
+"Impossible event has probability 0.",
+"Sure event has probability 1.",
+"Complementary probability is P(not E)=1-P(E).",
+"List outcomes carefully."
+],
+questions:[
+"Find probability of a simple event.",
+"Find probability using a die.",
+"Find probability using coins.",
+"Find probability using cards.",
+"Find complementary probability.",
+"Find probability of an impossible event.",
+"Find probability of a sure event.",
+"Solve a real-life probability problem.",
+"Find favourable outcomes.",
+"Verify probability lies between 0 and 1."
+]
+}
+
+};
+
+
+/* =========================================================
+INTERNAL CHOICE DATA
+========================================================= */
+
+const choices=[
+
+["Q29","8 MARKS","Real Numbers","Arithmetic Progressions"],
+
+["Q30","8 MARKS","Statistics","Triangles"],
+
+["Q31","8 MARKS","Coordinate Geometry","Areas Related to Circles"],
+
+["Q32","8 MARKS","Probability","Surface Areas and Volumes"],
+
+["Q33","8 MARKS","Pair of Linear Equations","Applications of Trigonometry"]
+
+];
+
+
+/* =========================================================
+CREATE CHAPTER GRIDS
+========================================================= */
+
+function createChapterCards(containerId,clickFunction){
+
+    const container=
+    document.getElementById(containerId);
+
+    container.innerHTML="";
+
+    chapters.forEach((chapter,index)=>{
+
+        const card=
+        document.createElement("div");
+
+        card.className="chapter-card";
+
+        card.onclick=()=>{
+            clickFunction(index);
+        };
+
+        card.innerHTML=`
+
+            <div class="chapter-number">
+                ${String(index+1).padStart(2,"0")}
+            </div>
+
+            <div class="chapter-info">
+
+                <h3>
+                    ${chapter.name}
+                </h3>
+
+                <span>
+                    ${chapter.calculation}
+                </span>
+
+            </div>
+
+            <div class="chapter-arrow">
+                →
+            </div>
+
+        `;
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================================================
+MARKS GRID
+========================================================= */
+
+function createMarksGrid(){
+
+    const grid=
+    document.getElementById("marksGrid");
+
+    grid.innerHTML="";
+
+    const max=
+    Math.max(...chapters.map(x=>x.marks));
+
+    chapters.forEach(chapter=>{
+
+        const card=
+        document.createElement("div");
+
+        card.className="marks-card";
+
+        const percentage=
+        Math.round(
+            chapter.marks/max*100
+        );
+
+        card.innerHTML=`
+
+            <div class="marks-top">
+
+                <h3>
+                    ${chapter.name}
+                </h3>
+
+                <div class="marks-value">
+                    ${chapter.marks} Marks
+                </div>
+
+            </div>
+
+            <div class="marks-bar">
+
+                <div
+                class="marks-fill"
+                style="width:${percentage}%"
+                ></div>
+
+            </div>
+
+        `;
+
+        grid.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================================================
+CHOICE LIST
+========================================================= */
+
+function createChoiceList(){
+
+    const container=
+    document.getElementById("choiceList");
+
+    container.innerHTML="";
+
+    choices.forEach(choice=>{
+
+        const card=
+        document.createElement("div");
+
+        card.className="choice-card";
+
+        card.innerHTML=`
+
+            <div class="choice-header">
+
+                <strong>
+                    ${choice[0]}
+                </strong>
+
+                <div class="choice-mark">
+                    ${choice[1]}
+                </div>
+
+            </div>
+
+            <div class="choice-options">
+
+                <div class="choice-option option-a">
+                    ${choice[2]}
+                </div>
+
+                <div class="or">
+                    OR
+                </div>
+
+                <div class="choice-option option-b">
+                    ${choice[3]}
+                </div>
+
+            </div>
+
+        `;
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================================================
+LOGIN
+========================================================= */
+
+function showScreen(id){
+
+    document
+    .querySelectorAll("#loginSystem .screen")
+    .forEach(screen=>{
+        screen.classList.remove("active");
+    });
+
+    document
+    .getElementById(id)
+    .classList.add("active");
+}
+
+
+function showNameScreen(){
+
+    document.getElementById("nameInput").value="";
+
+    document.getElementById("nameMessage")
+    .textContent="";
+
+    showScreen("nameScreen");
+
+    setTimeout(()=>{
+        document
+        .getElementById("nameInput")
+        .focus();
+    },100);
+
+}
+
+
+function checkName(){
+
+    const name=
+    document
+    .getElementById("nameInput")
+    .value.trim();
+
+    const message=
+    document
+    .getElementById("nameMessage");
+
+    if(name===""){
+
+        message.textContent=
+        "⚠️ Please enter your name.";
+
+        return;
+    }
+
+    if(name.length<2){
+
+        message.textContent=
+        "⚠️ Name must contain at least 2 characters.";
+
+        return;
+    }
+
+    const key=
+    "mathsMaster_"+name.toLowerCase();
+
+    const account=
+    localStorage.getItem(key);
+
+    if(account){
+
+        document
+        .getElementById("loginName")
+        .value=name;
+
+        document
+        .getElementById("loginPassword")
+        .value="";
+
+        document
+        .getElementById("loginMessage")
+        .textContent="";
+
+        showScreen("loginScreen");
+
+    }else{
+
+        document
+        .getElementById("newUserName")
+        .textContent=name;
+
+        document
+        .getElementById("createPassword")
+        .value="";
+
+        document
+        .getElementById("confirmPassword")
+        .value="";
+
+        document
+        .getElementById("createMessage")
+        .textContent="";
+
+        showScreen("createPasswordScreen");
+
+    }
+
+}
+
+
+function createAccount(){
+
+    const name=
+    document
+    .getElementById("newUserName")
+    .textContent.trim();
+
+    const password=
+    document
+    .getElementById("createPassword")
+    .value;
+
+    const confirm=
+    document
+    .getElementById("confirmPassword")
+    .value;
+
+    const message=
+    document
+    .getElementById("createMessage");
+
+    if(password.length<4){
+
+        message.textContent=
+        "⚠️ Password must contain at least 4 characters.";
+
+        return;
+    }
+
+    if(password!==confirm){
+
+        message.textContent=
+        "❌ Passwords do not match.";
+
+        return;
+    }
+
+    const account={
+        name:name,
+        password:password,
+        created:new Date().toISOString()
+    };
+
+    localStorage.setItem(
+        "mathsMaster_"+name.toLowerCase(),
+        JSON.stringify(account)
+    );
+
+    localStorage.setItem(
+        "mathsMasterLoggedUser",
+        name
+    );
+
+    showScreen("successScreen");
+
+}
+
+
+function loginUser(){
+
+    const name=
+    document
+    .getElementById("loginName")
+    .value.trim();
+
+    const password=
+    document
+    .getElementById("loginPassword")
+    .value;
+
+    const message=
+    document
+    .getElementById("loginMessage");
+
+    const stored=
+    localStorage.getItem(
+        "mathsMaster_"+name.toLowerCase()
+    );
+
+    if(!stored){
+
+        message.textContent=
+        "❌ Account not found.";
+
+        return;
+    }
+
+    const account=
+    JSON.parse(stored);
+
+    if(password===account.password){
+
+        localStorage.setItem(
+            "mathsMasterLoggedUser",
+            account.name
+        );
+
+        showScreen("successScreen");
+
+    }else{
+
+        message.textContent=
+        "❌ Incorrect password.";
+
+        document
+        .getElementById("loginPassword")
+        .value="";
+
+    }
+
+}
+
+
+/* =========================================================
+ENTER WEBSITE
+========================================================= */
+
+function enterWebsite(){
+
+    const user=
+    localStorage.getItem(
+        "mathsMasterLoggedUser"
+    );
+
+    if(user){
+
+        document
+        .getElementById("username")
+        .textContent=user;
+
+        document
+        .getElementById("heroUsername")
+        .textContent=user;
+
+    }
+
+    document
+    .getElementById("loginSystem")
+    .classList.add("hidden");
+
+    document
+    .getElementById("mainWebsite")
+    .classList.remove("hidden");
+
+    goDashboard();
+
+}
+
+
+/* =========================================================
+PAGE NAVIGATION
+========================================================= */
+
+function openMainPage(id){
+
+    document
+    .querySelectorAll("#mainWebsite .page")
+    .forEach(page=>{
+        page.classList.remove("active");
+    });
+
+    document
+    .getElementById(id)
+    .classList.add("active");
+
+    window.scrollTo(0,0);
+
+}
+
+
+function goDashboard(){
+
+    openMainPage("dashboardPage");
+
+}
+
+
+function logout(){
+
+    localStorage.removeItem(
+        "mathsMasterLoggedUser"
+    );
+
+    document
+    .getElementById("mainWebsite")
+    .classList.add("hidden");
+
+    document
+    .getElementById("loginSystem")
+    .classList.remove("hidden");
+
+    showScreen("welcomeScreen");
+
+}
+
+
+/* =========================================================
+LESSONS
+========================================================= */
+
+let selectedLessonIndex=0;
+
+
+function openLesson(index){
+
+    selectedLessonIndex=index;
+
+    document
+    .getElementById("selectedLessonTitle")
+    .textContent=
+    chapters[index].name;
+
+    openMainPage(
+        "selectedLessonPage"
+    );
+
+}
+
+
+function showLessonContent(type){
+
+    const chapter=
+    chapters[selectedLessonIndex].name;
+
+    const data=
+    lessonData[chapter];
+
+    document
+    .getElementById("contentTitle")
+    .textContent=chapter;
+
+    document
+    .getElementById("contentSubtitle")
+    .textContent=
+    type==="key"
+    ? "Key Points"
+    : "Most Important Questions";
+
+    const area=
+    document
+    .getElementById("contentArea");
+
+    area.innerHTML="";
+
+
+    if(!data){
+
+        area.innerHTML=`
+
+        <div class="section-card">
+
+            <h2>
+                Content Coming Soon
+            </h2>
+
+            <p>
+                More premium study material will be added
+                for this chapter.
+            </p>
+
+        </div>
+
+        `;
+
+    }else{
+
+        if(type==="key"){
+
+            const box=
+            document.createElement("div");
+
+            box.className="section-card";
+
+            let html=`
+                <h2>
+                    💡 Quick Revision Points
+                </h2>
+                <ul>
+            `;
+
+            data.key.forEach(point=>{
+
+                html+=`
+                    <li>${point}</li>
+                `;
+
+            });
+
+            html+=`
+                </ul>
+            `;
+
+            box.innerHTML=html;
+
+            area.appendChild(box);
+
+        }else{
+
+            data.questions.forEach(
+            (question,index)=>{
+
+                const card=
+                document.createElement("div");
+
+                card.className=
+                "question-card";
+
+                card.innerHTML=`
+
+                    <span class="question-number">
+                        ${index+1}
+                    </span>
+
+                    <strong>
+                        ${question}
+                    </strong>
+
+                `;
+
+                area.appendChild(card);
+
+            });
+
+        }
+
+    }
+
+    openMainPage(
+        "lessonContentPage"
+    );
+
+}
+
+
+/* =========================================================
+QUIZ SYSTEM
+========================================================= */
+
+let quizChapterIndex=0;
+let quizQuestionIndex=0;
+let quizScore=0;
+let quizAnswered=false;
+
+
+/* Generate MCQ choices automatically */
+
+function generateQuizQuestions(chapter){
+
+    const data=
+    lessonData[chapter];
+
+    if(!data) return [];
+
+    const questions=[];
+
+    data.questions.forEach(
+    (question,index)=>{
+
+        const correct=
+        "Practice";
+
+        const options=[
+            correct,
+            "Revision",
+            "None",
+            "Not applicable"
+        ];
+
+        const shift=
+        index%4;
+
+        const shuffled=
+        [
+            options[shift],
+            options[(shift+1)%4],
+            options[(shift+2)%4],
+            options[(shift+3)%4]
+        ];
+
+        questions.push({
+
+            question:
+            question,
+
+            answer:
+            correct,
+
+            options:
+            shuffled
+
+        });
+
+    });
+
+    return questions;
+
+}
+
+
+/*
+For a real educational quiz, use
+the answer data below for the first
+questions. More can be expanded later.
+*/
+
+const quizData={
+
+"Real Numbers":[
+["Which type of number cannot be written as p/q?","Irrational"],
+["Which is irrational?","√2"],
+["What does HCF stand for?","Highest Common Factor"],
+["What does LCM stand for?","Least Common Multiple"],
+["12 as prime factors is?","2² × 3"],
+["√3 is a?","Irrational number"],
+["π is generally treated as?","Irrational number"],
+["A composite number can be expressed as?","Product of primes"],
+["Proof by contradiction starts by assuming?","The opposite statement"],
+["HCF × LCM equals?","Product of two numbers"]
+],
+
+"Polynomials":[
+["Highest power of variable is called?","Degree"],
+["A value making p(x)=0 is called?","Zero"],
+["A quadratic polynomial has degree?","2"],
+["For ax²+bx+c, sum of zeros is?","-b/a"],
+["Product of zeros is?","c/a"],
+["A linear polynomial has degree?","1"],
+["A constant polynomial has degree?","0"],
+["Graphical zeros are represented by?","x-intercepts"],
+["Polynomial division uses?","Division algorithm"],
+["The coefficient of x² in ax²+bx+c is?","a"]
+],
+
+"Pair of Linear Equations in Two Variables":[
+["A linear equation in two variables has degree?","1"],
+["Two intersecting lines have?","One solution"],
+["Parallel lines have?","No solution"],
+["Coincident lines have?","Infinitely many solutions"],
+["A common method is?","Substitution"],
+["Another common method is?","Elimination"],
+["Graph of a linear equation is a?","Straight line"],
+["Variables are usually?","x and y"],
+["Unique solution means?","One solution"],
+["A pair of equations contains?","Two equations"]
+],
+
+"Quadratic Equations":[
+["Standard form is?","ax²+bx+c=0"],
+["Quadratic formula is?","(-b±√(b²-4ac))/2a"],
+["Discriminant is?","b²-4ac"],
+["Degree of quadratic equation is?","2"],
+["D > 0 gives?","Two distinct real roots"],
+["D = 0 gives?","Equal real roots"],
+["D < 0 gives?","No real roots"],
+["a must be?","Non-zero"],
+["One solving method is?","Factorisation"],
+["Another method is?","Completing the square"]
+],
+
+"Arithmetic Progressions":[
+["Difference between consecutive terms is?","Common difference"],
+["nth term is?","a+(n-1)d"],
+["First term is represented by?","a"],
+["Common difference is represented by?","d"],
+["Number of terms is represented by?","n"],
+["Sum formula is?","n/2[2a+(n-1)d]"],
+["An AP has a?","Constant difference"],
+["Sequence 2,4,6,8 has d=?","2"],
+["First term of 5,8,11 is?","5"],
+["The 10th term uses?","a+9d"]
+],
+
+"Triangles":[
+["AA is a criterion for?","Similarity"],
+["SSS stands for?","Side-Side-Side"],
+["SAS stands for?","Side-Angle-Side"],
+["Similar triangles have proportional?","Corresponding sides"],
+["Pythagoras theorem applies to?","Right triangles"],
+["In a right triangle, longest side is?","Hypotenuse"],
+["BPT stands for?","Basic Proportionality Theorem"],
+["AA uses how many angles?","Two"],
+["Similar triangles have equal corresponding?","Angles"],
+["Pythagoras formula is?","a²+b²=c²"]
+],
+
+"Coordinate Geometry":[
+["Coordinates are written as?","(x,y)"],
+["Distance formula contains?","Square root"],
+["Midpoint formula averages?","Coordinates"],
+["Origin is?","(0,0)"],
+["x-coordinate is called?","Abscissa"],
+["y-coordinate is called?","Ordinate"],
+["Distance formula is?","√[(x₂-x₁)²+(y₂-y₁)²]"],
+["Midpoint x-coordinate is?","(x₁+x₂)/2"],
+["Points on x-axis have y=?","0"],
+["Points on y-axis have x=?","0"]
+],
+
+"Introduction to Trigonometry":[
+["sin θ equals?","Perpendicular/Hypotenuse"],
+["cos θ equals?","Base/Hypotenuse"],
+["tan θ equals?","Perpendicular/Base"],
+["1+tan²θ equals?","sec²θ"],
+["sin²θ+cos²θ equals?","1"],
+["cosec θ is reciprocal of?","sin θ"],
+["sec θ is reciprocal of?","cos θ"],
+["cot θ is reciprocal of?","tan θ"],
+["tan θ equals?","sin θ/cos θ"],
+["sin 30° equals?","1/2"]
+],
+
+"Some Applications of Trigonometry":[
+["Angle looking upward is?","Angle of elevation"],
+["Angle looking downward is?","Angle of depression"],
+["Height-distance problems use?","Trigonometry"],
+["A common ratio is?","tan"],
+["A tower problem requires a?","Right triangle"],
+["Horizontal distance is often?","Base"],
+["Vertical height is often?","Perpendicular"],
+["Always draw a?","Diagram"],
+["Angle of elevation is measured from?","Horizontal"],
+["Shadow problems involve?","Height and distance"]
+],
+
+"Circles":[
+["A tangent touches circle at?","One point"],
+["Radius at contact is?","Perpendicular to tangent"],
+["Tangents from same external point are?","Equal"],
+["Point where tangent touches is?","Point of contact"],
+["A circle has?","Infinite points"],
+["Radius joins center to?","Point on circle"],
+["Diameter is?","2r"],
+["Tangent theorem uses?","Radius"],
+["External point can have?","Two tangents"],
+["Tangents are?","Equal in length"]
+],
+
+"Areas Related to Circles":[
+["Area of circle is?","πr²"],
+["Circumference is?","2πr"],
+["Area of sector uses?","θ/360"],
+["Arc length uses?","θ/360"],
+["Diameter equals?","2r"],
+["Radius is half of?","Diameter"],
+["Semicircle angle is?","180°"],
+["Full circle angle is?","360°"],
+["Area unit is?","Square unit"],
+["Circumference unit is?","Linear unit"]
+],
+
+"Surface Areas and Volumes":[
+["Volume of cylinder is?","πr²h"],
+["Volume of sphere is?","4/3πr³"],
+["Volume of cone is?","1/3πr²h"],
+["Cube volume is?","a³"],
+["Cuboid volume is?","lbh"],
+["Surface area measures?","Outer area"],
+["Volume measures?","Space occupied"],
+["CSA means?","Curved Surface Area"],
+["TSA means?","Total Surface Area"],
+["1 litre equals?","1000 cm³"]
+],
+
+"Statistics":[
+["Mean is a measure of?","Central tendency"],
+["Median is?","Middle value"],
+["Mode is?","Most frequent value"],
+["Cumulative frequency is used for?","Median"],
+["Grouped data uses?","Class intervals"],
+["Highest frequency class is?","Modal class"],
+["Mean is calculated using?","Frequencies and values"],
+["Median divides data into?","Two equal parts"],
+["Mode represents?","Most frequent observation"],
+["Statistics deals with?","Data"]
+],
+
+"Probability":[
+["Probability lies between?","0 and 1"],
+["Impossible event probability is?","0"],
+["Sure event probability is?","1"],
+["P(E) equals?","Favourable/Total outcomes"],
+["Complement is?","1-P(E)"],
+["A coin has how many outcomes?","2"],
+["A standard die has?","6 outcomes"],
+["Probability of an event cannot be?","Greater than 1"],
+["Favourable outcomes are?","Desired outcomes"],
+["Probability measures?","Chance"]
+]
+
+};
+
+
+/* =========================================================
+QUIZ CHAPTER PAGE
+========================================================= */
+
+function openQuizChapterPage(){
+
+    createChapterCards(
+        "quizChapterGrid",
+        startQuiz
+    );
+
+    openMainPage(
+        "quizChapterPage"
+    );
+
+}
+
+
+/* =========================================================
+START QUIZ
+========================================================= */
+
+function startQuiz(index){
+
+    quizChapterIndex=index;
+
+    quizQuestionIndex=0;
+
+    quizScore=0;
+
+    quizAnswered=false;
+
+    document
+    .getElementById("quizTitle")
+    .textContent=
+    chapters[index].name+" Quiz";
+
+    openMainPage("quizPage");
+
+    renderQuizQuestion();
+
+}
+
+
+/* =========================================================
+RENDER QUIZ
+========================================================= */
+
+function renderQuizQuestion(){
+
+    const chapter=
+    chapters[quizChapterIndex].name;
+
+    const questions=
+    quizData[chapter];
+
+    const box=
+    document.getElementById("quizBox");
+
+    if(!questions){
+
+        box.innerHTML=`
+
+        <div class="quiz-card quiz-result">
+
+            <div class="result-icon">
+                🚧
+            </div>
+
+            <h2>
+                Quiz Coming Soon
+            </h2>
+
+            <p class="result-message">
+                Questions for this chapter will be added soon.
+            </p>
+
+        </div>
+
+        `;
+
+        return;
+    }
+
+
+    if(quizQuestionIndex>=10){
+
+        showQuizResult();
+
+        return;
+    }
+
+
+    const q=
+    questions[quizQuestionIndex];
+
+    let options=[
+        q[1],
+        "None of these",
+        "Cannot be determined",
+        "All of these"
+    ];
+
+
+    /*
+    Make answer position different
+    for different questions.
+    */
+
+    const shift=
+    quizQuestionIndex%4;
+
+    options=[
+        options[shift],
+        options[(shift+1)%4],
+        options[(shift+2)%4],
+        options[(shift+3)%4]
+    ];
+
+
+    box.innerHTML=`
+
+        <div class="quiz-top">
+
+            <div class="quiz-progress-text">
+                QUESTION
+                ${quizQuestionIndex+1}
+                / 10
+            </div>
+
+            <div class="quiz-score">
+                SCORE: ${quizScore}
+            </div>
+
+        </div>
+
+
+        <div class="quiz-progress">
+
+            <div
+            class="quiz-progress-fill"
+            style="
+            width:${(quizQuestionIndex/10)*100}%
+            "
+            ></div>
+
+        </div>
+
+
+        <div class="quiz-card">
+
+            <div class="quiz-question-number">
+                QUESTION ${quizQuestionIndex+1}
+            </div>
+
+            <div class="quiz-question">
+                ${q[0]}
+            </div>
+
+            <div
+            class="quiz-options"
+            id="quizOptions"
+            >
+
+            ${options.map((option,i)=>`
+
+                <button
+                class="quiz-option"
+                onclick="selectQuizAnswer(
+                    this,
+                    '${escapeQuotes(option)}',
+                    '${escapeQuotes(q[1])}'
+                )"
+                >
+                    ${String.fromCharCode(65+i)}.
+                    ${option}
+                </button>
+
+            `).join("")}
+
+            </div>
+
+            <button
+            id="quizNext"
+            class="quiz-next hidden"
+            onclick="nextQuizQuestion()"
+            >
+                NEXT QUESTION →
+            </button>
+
+        </div>
+
+    `;
+
+}
+
+
+function escapeQuotes(text){
+
+    return text
+    .replace(/\\/g,"\\\\")
+    .replace(/'/g,"\\'")
+    .replace(/"/g,'&quot;');
+
+}
+
+
+/* =========================================================
+SELECT ANSWER
+========================================================= */
+
+function selectQuizAnswer(button,selected,correct){
+
+    if(quizAnswered) return;
+
+    quizAnswered=true;
+
+    const buttons=
+    document
+    .querySelectorAll(".quiz-option");
+
+    buttons.forEach(btn=>{
+        btn.disabled=true;
+    });
+
+
+    if(selected===correct){
+
+        button.classList.add("correct");
+
+        quizScore++;
+
+    }else{
+
+        button.classList.add("wrong");
+
+        buttons.forEach(btn=>{
+
+            if(
+            btn.textContent
+            .trim()
+            .endsWith(correct)
+            ){
+
+                btn.classList.add("correct");
+
+            }
+
+        });
+
+    }
+
+
+    document
+    .getElementById("quizNext")
+    .classList.remove("hidden");
+
+}
+
+
+function nextQuizQuestion(){
+
+    quizQuestionIndex++;
+
+    quizAnswered=false;
+
+    renderQuizQuestion();
+
+}
+
+
+function showQuizResult(){
+
+    const percentage=
+    quizScore*10;
+
+    let icon="📚";
+    let message=
+    "Keep practising. You can improve your score!";
+
+    if(percentage>=90){
+
+        icon="🏆";
+
+        message=
+        "Outstanding! Your preparation is excellent.";
+
+    }else if(percentage>=70){
+
+        icon="🔥";
+
+        message=
+        "Great work! Keep revising to reach the top.";
+
+    }else if(percentage>=50){
+
+        icon="💪";
+
+        message=
+        "Good attempt. Revise the key points and try again.";
+
+    }
+
+
+    document
+    .getElementById("quizBox")
+    .innerHTML=`
+
+        <div class="quiz-card quiz-result">
+
+            <div class="result-icon">
+                ${icon}
+            </div>
+
+            <h2>
+                Quiz Completed!
+            </h2>
+
+            <div class="result-score">
+                ${quizScore}/10
+            </div>
+
+            <p class="result-message">
+                You scored <strong>${percentage}%</strong>.
+                <br><br>
+                ${message}
+            </p>
+
+            <button
+            class="quiz-next"
+            onclick="startQuiz(${quizChapterIndex})"
+            >
+                🔄 RETAKE QUIZ
+            </button>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================================================
+NOTEBOOK
+========================================================= */
+
+function getCurrentUser(){
+
+    return localStorage.getItem(
+        "mathsMasterLoggedUser"
+    ) || "Student";
+
+}
+
+
+function getNotesKey(){
+
+    return "mathsMasterNotes_"+
+    getCurrentUser().toLowerCase();
+
+}
+
+
+function saveNote(){
+
+    const title=
+    document
+    .getElementById("noteTitle")
+    .value.trim();
+
+    const body=
+    document
+    .getElementById("noteBody")
+    .value.trim();
+
+    if(title==="" && body===""){
+
+        alert("Please write something before saving.");
+
+        return;
+
+    }
+
+
+    const notes=
+    JSON.parse(
+        localStorage.getItem(
+            getNotesKey()
+        ) || "[]"
+    );
+
+
+    notes.unshift({
+
+        id:Date.now(),
+
+        title:
+        title || "Untitled Note",
+
+        body:body,
+
+        date:
+        new Date().toLocaleString()
+
+    });
+
+
+    localStorage.setItem(
+        getNotesKey(),
+        JSON.stringify(notes)
+    );
+
+
+    document
+    .getElementById("noteTitle")
+    .value="";
+
+    document
+    .getElementById("noteBody")
+    .value="";
+
+
+    renderNotes();
+
+}
+
+
+function renderNotes(){
+
+    const container=
+    document
+    .getElementById("notesList");
+
+    const notes=
+    JSON.parse(
+        localStorage.getItem(
+            getNotesKey()
+        ) || "[]"
+    );
+
+
+    if(notes.length===0){
+
+        container.innerHTML=`
+
+        <div class="empty">
+
+            <div class="empty-icon">
+                📓
+            </div>
+
+            <p>
+                No notes yet.
+                Start writing your revision notes.
+            </p>
+
+        </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    container.innerHTML="";
+
+
+    notes.forEach(note=>{
+
+        const card=
+        document.createElement("div");
+
+        card.className="saved-note";
+
+        card.innerHTML=`
+
+            <h3>
+                ${escapeHTML(note.title)}
+            </h3>
+
+            <p>
+                ${escapeHTML(note.body)}
+            </p>
+
+            <small>
+                ${escapeHTML(note.date)}
+            </small>
+
+            <div class="note-actions">
+
+                <button
+                class="delete-note"
+                onclick="deleteNote(${note.id})"
+                >
+                    🗑 DELETE
+                </button>
+
+            </div>
+
+        `;
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+function deleteNote(id){
+
+    let notes=
+    JSON.parse(
+        localStorage.getItem(
+            getNotesKey()
+        ) || "[]"
+    );
+
+
+    notes=
+    notes.filter(
+        note=>note.id!==id
+    );
+
+
+    localStorage.setItem(
+        getNotesKey(),
+        JSON.stringify(notes)
+    );
+
+
+    renderNotes();
+
+}
+
+
+function escapeHTML(text){
+
+    return text
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+/* =========================================================
+ENTER KEY SUPPORT
+========================================================= */
+
+document.addEventListener(
+"keydown",
+event=>{
+
+    if(event.key!=="Enter")
+    return;
+
+
+    const active=
+    document.querySelector(
+        "#loginSystem .screen.active"
+    );
+
+
+    if(!active)
+    return;
+
+
+    if(active.id==="nameScreen")
+        checkName();
+
+    else if(
+        active.id==="createPasswordScreen"
+    )
+        createAccount();
+
+    else if(
+        active.id==="loginScreen"
+    )
+        loginUser();
+
+});
+
+
+/* =========================================================
+INITIALIZE
+========================================================= */
+
+window.addEventListener(
+"load",
+()=>{
+
+    createChapterCards(
+        "keyChapterGrid",
+        openLesson
+    );
+
+    createMarksGrid();
+
+    createChoiceList();
+
+    createChapterCards(
+        "quizChapterGrid",
+        startQuiz
+    );
+
+    renderNotes();
+
+
+    const user=
+    localStorage.getItem(
+        "mathsMasterLoggedUser"
+    );
+
+
+    if(user){
+
+        document
+        .getElementById("username")
+        .textContent=user;
+
+        document
+        .getElementById("heroUsername")
+        .textContent=user;
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
