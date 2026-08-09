@@ -7,10 +7,6 @@
 <title>Maths Master | AP SSC 10th Maths</title>
 
 <style>
-/* =========================================================
-   GLOBAL
-========================================================= */
-
 *{
     margin:0;
     padding:0;
@@ -57,9 +53,7 @@ button:hover{
     display:block;
 }
 
-/* =========================================================
-   PREMIUM LOGIN
-========================================================= */
+/* LOGIN */
 
 .login-container{
     width:min(92%,470px);
@@ -85,12 +79,8 @@ button:hover{
     justify-content:center;
     font-size:32px;
     font-weight:900;
-
-    background:
-    linear-gradient(135deg,#2563eb,#7c3aed);
-
-    box-shadow:
-    0 15px 40px rgba(37,99,235,.3);
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    box-shadow:0 15px 40px rgba(37,99,235,.3);
 }
 
 .logo-area h1{
@@ -107,20 +97,14 @@ button:hover{
 .login-card{
     padding:40px 30px;
     border-radius:30px;
-
-    background:
-    linear-gradient(
+    background:linear-gradient(
         145deg,
         rgba(255,255,255,.09),
         rgba(255,255,255,.025)
     );
-
     border:1px solid rgba(255,255,255,.1);
-
     backdrop-filter:blur(25px);
-
-    box-shadow:
-    0 30px 100px rgba(0,0,0,.45);
+    box-shadow:0 30px 100px rgba(0,0,0,.45);
 }
 
 .welcome{
@@ -132,10 +116,8 @@ button:hover{
     display:inline-block;
     padding:8px 15px;
     border-radius:50px;
-
     background:rgba(96,165,250,.1);
     border:1px solid rgba(96,165,250,.25);
-
     color:#93c5fd;
     font-size:12px;
     margin-bottom:20px;
@@ -144,15 +126,7 @@ button:hover{
 .welcome h2{
     font-size:43px;
     margin-bottom:15px;
-
-    background:
-    linear-gradient(
-        90deg,
-        #fff,
-        #60a5fa,
-        #c084fc
-    );
-
+    background:linear-gradient(90deg,#fff,#60a5fa,#c084fc);
     -webkit-background-clip:text;
     color:transparent;
 }
@@ -194,15 +168,10 @@ select{
     width:100%;
     padding:15px;
     border-radius:14px;
-
     border:1px solid rgba(255,255,255,.1);
-
     outline:none;
-
     background:rgba(255,255,255,.05);
-
     color:white;
-
     font-size:15px;
 }
 
@@ -221,29 +190,17 @@ select:focus{
     width:100%;
     padding:15px;
     border-radius:14px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #2563eb,
-        #7c3aed
-    );
-
-    box-shadow:
-    0 10px 30px rgba(37,99,235,.2);
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    box-shadow:0 10px 30px rgba(37,99,235,.2);
 }
 
 .secondary-btn{
     width:100%;
     padding:14px;
     margin-top:10px;
-
     background:transparent;
-
     border:1px solid rgba(255,255,255,.1);
-
     border-radius:14px;
-
     color:#94a3b8;
 }
 
@@ -261,34 +218,34 @@ select:focus{
     font-size:12px;
 }
 
+/* UPDATED WHITE CREDIT */
+
 .login-footer{
     text-align:center;
     margin-top:18px;
-    color:#475569;
+    color:#ffffff;
     font-size:11px;
 }
 
-/* =========================================================
-   NAVIGATION
-========================================================= */
+.login-footer strong{
+    color:#ffffff;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+/* NAVIGATION */
 
 nav{
     height:72px;
     padding:0 6%;
-
     display:flex;
     align-items:center;
     justify-content:space-between;
-
     background:rgba(5,8,22,.82);
-
     backdrop-filter:blur(22px);
-
     border-bottom:1px solid rgba(255,255,255,.08);
-
     position:sticky;
     top:0;
-
     z-index:1000;
 }
 
@@ -312,17 +269,12 @@ nav{
 .nav-home{
     padding:9px 13px;
     border-radius:10px;
-
     background:rgba(255,255,255,.06);
-
     color:#cbd5e1;
-
     font-size:12px;
 }
 
-/* =========================================================
-   PREMIUM DASHBOARD
-========================================================= */
+/* DASHBOARD */
 
 .dashboard{
     max-width:1150px;
@@ -333,39 +285,23 @@ nav{
 .dashboard-hero{
     position:relative;
     overflow:hidden;
-
     padding:45px;
-
     border-radius:30px;
-
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
         rgba(37,99,235,.16),
         rgba(124,58,237,.13),
         rgba(255,255,255,.03)
     );
-
     border:1px solid rgba(255,255,255,.1);
-
     margin-bottom:30px;
 }
 
-.dashboard-hero::before{
-    content:"";
-    position:absolute;
-
-    width:220px;
-    height:220px;
-
-    right:-70px;
-    top:-80px;
-
-    border-radius:50%;
-
-    background:rgba(96,165,250,.12);
-
-    filter:blur(10px);
+.dashboard-hero h1{
+    font-size:clamp(35px,6vw,58px);
+    background:linear-gradient(90deg,#fff,#60a5fa,#c084fc);
+    -webkit-background-clip:text;
+    color:transparent;
 }
 
 .hero-small{
@@ -374,21 +310,6 @@ nav{
     font-weight:800;
     letter-spacing:1.5px;
     margin-bottom:14px;
-}
-
-.dashboard-hero h1{
-    font-size:clamp(35px,6vw,58px);
-
-    background:
-    linear-gradient(
-        90deg,
-        #fff,
-        #60a5fa,
-        #c084fc
-    );
-
-    -webkit-background-clip:text;
-    color:transparent;
 }
 
 .dashboard-hero p{
@@ -407,52 +328,22 @@ nav{
 .premium-card{
     position:relative;
     overflow:hidden;
-
     padding:30px;
     min-height:230px;
-
     border-radius:25px;
-
-    background:
-    linear-gradient(
+    background:linear-gradient(
         145deg,
         rgba(255,255,255,.085),
         rgba(255,255,255,.025)
     );
-
     border:1px solid rgba(255,255,255,.09);
-
     cursor:pointer;
-
     transition:.35s;
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,.12);
 }
 
 .premium-card:hover{
     transform:translateY(-7px);
-
-    border-color:
-    rgba(96,165,250,.45);
-
-    box-shadow:
-    0 25px 60px rgba(37,99,235,.12);
-}
-
-.premium-card::after{
-    content:"";
-    position:absolute;
-
-    width:130px;
-    height:130px;
-
-    right:-60px;
-    bottom:-60px;
-
-    border-radius:50%;
-
-    background:rgba(96,165,250,.08);
+    border-color:rgba(96,165,250,.45);
 }
 
 .card-icon{
@@ -476,60 +367,35 @@ nav{
     position:absolute;
     right:25px;
     bottom:25px;
-
     width:42px;
     height:42px;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     border-radius:13px;
-
     background:rgba(96,165,250,.1);
-
     color:#60a5fa;
-
     font-size:20px;
 }
 
 .exit{
     width:100%;
     margin-top:22px;
-
     padding:15px;
-
     border-radius:14px;
-
     background:rgba(248,113,113,.05);
-
     border:1px solid rgba(248,113,113,.18);
-
     color:#fca5a5;
 }
 
-/* =========================================================
-   LIGHT PREMIUM PAGES
-========================================================= */
+/* LIGHT PAGES */
 
 .light-page{
     min-height:calc(100vh - 72px);
-
     background:
-    radial-gradient(
-        circle at 10% 0%,
-        rgba(37,99,235,.08),
-        transparent 30%
-    ),
-
-    linear-gradient(
-        135deg,
-        #f8fafc,
-        #eef4f8
-    );
-
+    radial-gradient(circle at 10% 0%,rgba(37,99,235,.08),transparent 30%),
+    linear-gradient(135deg,#f8fafc,#eef4f8);
     color:#172033;
-
     padding-bottom:80px;
 }
 
@@ -546,20 +412,13 @@ nav{
 
 .page-label{
     display:inline-block;
-
     padding:8px 15px;
-
     border-radius:50px;
-
     background:#eff6ff;
-
     border:1px solid #bfdbfe;
-
     color:#1d4ed8;
-
     font-size:12px;
     font-weight:800;
-
     margin-bottom:15px;
 }
 
@@ -572,15 +431,11 @@ nav{
 .page-header p{
     max-width:700px;
     margin:auto;
-
     color:#64748b;
-
     line-height:1.7;
 }
 
-/* =========================================================
-   PREMIUM CHAPTER LIST
-========================================================= */
+/* CHAPTERS */
 
 .chapter-grid{
     display:grid;
@@ -590,58 +445,32 @@ nav{
 
 .chapter-card{
     position:relative;
-
     display:flex;
     align-items:center;
     gap:15px;
-
     padding:20px;
-
     border-radius:20px;
-
-    background:
-    rgba(255,255,255,.88);
-
+    background:rgba(255,255,255,.88);
     border:1px solid #e2e8f0;
-
     cursor:pointer;
-
     transition:.3s;
-
-    box-shadow:
-    0 8px 25px rgba(15,23,42,.04);
 }
 
 .chapter-card:hover{
     transform:translateY(-4px);
-
     border-color:#93c5fd;
-
-    box-shadow:
-    0 15px 35px rgba(37,99,235,.1);
 }
 
 .chapter-number{
     width:48px;
     height:48px;
-
     flex-shrink:0;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     border-radius:14px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #eff6ff,
-        #eef2ff
-    );
-
+    background:linear-gradient(135deg,#eff6ff,#eef2ff);
     color:#1d4ed8;
-
     font-weight:900;
 }
 
@@ -657,11 +486,8 @@ nav{
 
 .chapter-info span{
     display:block;
-
     margin-top:5px;
-
     color:#64748b;
-
     font-size:12px;
 }
 
@@ -670,23 +496,15 @@ nav{
     font-size:20px;
 }
 
-/* =========================================================
-   PREMIUM SECTION
-========================================================= */
+/* CONTENT */
 
 .section-card{
     background:white;
-
     border:1px solid #e2e8f0;
-
     border-radius:25px;
-
     padding:28px;
-
     margin-bottom:18px;
-
-    box-shadow:
-    0 10px 30px rgba(15,23,42,.05);
+    box-shadow:0 10px 30px rgba(15,23,42,.05);
 }
 
 .section-card h2{
@@ -706,98 +524,89 @@ nav{
 
 .question-card{
     padding:20px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #f8fafc,
-        #ffffff
-    );
-
+    background:linear-gradient(135deg,#f8fafc,#ffffff);
     border:1px solid #e2e8f0;
-
     border-radius:18px;
-
     margin-bottom:12px;
-
-    transition:.2s;
-}
-
-.question-card:hover{
-    border-color:#bfdbfe;
-    transform:translateX(3px);
 }
 
 .question-number{
     display:inline-flex;
-
     width:30px;
     height:30px;
-
     align-items:center;
     justify-content:center;
-
     border-radius:9px;
-
     background:#eff6ff;
-
     color:#2563eb;
-
     font-weight:900;
-
     margin-right:8px;
 }
 
-/* =========================================================
-   BACK BUTTON
-========================================================= */
-
 .back-button{
     width:100%;
-
     padding:15px;
-
     margin-top:25px;
-
     border-radius:14px;
-
     background:white;
-
     border:1px solid #e2e8f0;
-
     color:#172554;
-
-    box-shadow:
-    0 5px 20px rgba(15,23,42,.04);
 }
 
-/* =========================================================
-   SSC PREMIUM
-========================================================= */
+/* LESSON MENU */
+
+.lesson-menu{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.lesson-option{
+    padding:30px;
+    min-height:190px;
+    background:white;
+    border:1px solid #e2e8f0;
+    border-radius:24px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.lesson-option:hover{
+    transform:translateY(-5px);
+    border-color:#93c5fd;
+}
+
+.lesson-option-icon{
+    font-size:38px;
+    margin-bottom:18px;
+}
+
+.lesson-option h2{
+    color:#172554;
+    font-size:19px;
+    margin-bottom:8px;
+}
+
+.lesson-option p{
+    color:#64748b;
+    line-height:1.6;
+    font-size:14px;
+}
+
+/* SSC */
 
 .stats-row{
     display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
+    grid-template-columns:repeat(3,1fr);
     gap:18px;
-
     margin-bottom:25px;
 }
 
 .stat-card{
     padding:25px;
-
     border-radius:22px;
-
     background:white;
-
     border:1px solid #e2e8f0;
-
-    box-shadow:
-    0 10px 30px rgba(15,23,42,.05);
-
     text-align:center;
 }
 
@@ -809,116 +618,72 @@ nav{
 
 .stat-card strong{
     display:block;
-
     color:#172554;
-
     font-size:34px;
-
     margin-top:8px;
 }
 
 .marks-grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(2,1fr);
-
+    grid-template-columns:repeat(2,1fr);
     gap:16px;
 }
 
 .marks-card{
     padding:22px;
-
     border-radius:20px;
-
     background:white;
-
     border:1px solid #e2e8f0;
-
-    box-shadow:
-    0 8px 25px rgba(15,23,42,.04);
 }
 
 .marks-top{
     display:flex;
-
     justify-content:space-between;
-
     gap:10px;
-
     margin-bottom:15px;
 }
 
 .marks-top h3{
     color:#172554;
-
     font-size:15px;
-
-    line-height:1.4;
 }
 
 .marks-value{
     white-space:nowrap;
-
     padding:6px 10px;
-
     border-radius:9px;
-
     background:#ecfdf5;
-
     color:#047857;
-
     font-size:12px;
-
     font-weight:800;
 }
 
 .marks-bar{
     height:8px;
-
     background:#e2e8f0;
-
     border-radius:50px;
-
     overflow:hidden;
 }
 
 .marks-fill{
     height:100%;
-
     border-radius:50px;
-
-    background:
-    linear-gradient(
-        90deg,
-        #2563eb,
-        #7c3aed
-    );
+    background:linear-gradient(90deg,#2563eb,#7c3aed);
 }
 
-/* =========================================================
-   INTERNAL CHOICE
-========================================================= */
+/* CHOICES */
 
 .choice-card{
     background:white;
-
     border:1px solid #e2e8f0;
-
     border-radius:22px;
-
     padding:22px;
-
     margin-bottom:15px;
-
-    box-shadow:
-    0 8px 25px rgba(15,23,42,.04);
 }
 
 .choice-header{
     display:flex;
     justify-content:space-between;
-
     margin-bottom:15px;
 }
 
@@ -928,42 +693,27 @@ nav{
 
 .choice-mark{
     padding:6px 10px;
-
     background:#172554;
-
     color:white;
-
     border-radius:8px;
-
     font-size:11px;
 }
 
 .choice-options{
     display:grid;
-
-    grid-template-columns:
-    1fr 50px 1fr;
-
+    grid-template-columns:1fr 50px 1fr;
     gap:12px;
-
     align-items:center;
 }
 
 .choice-option{
     padding:18px;
-
     min-height:70px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     text-align:center;
-
     border-radius:15px;
-
     font-weight:800;
 }
 
@@ -982,86 +732,17 @@ nav{
 .or{
     width:40px;
     height:40px;
-
     display:flex;
-
     align-items:center;
     justify-content:center;
-
     border-radius:50%;
-
     background:#f1f5f9;
-
     color:#64748b;
-
     font-size:11px;
-
     font-weight:900;
 }
 
-/* =========================================================
-   LESSON MENU
-========================================================= */
-
-.lesson-menu{
-    display:grid;
-
-    grid-template-columns:
-    repeat(2,1fr);
-
-    gap:20px;
-}
-
-.lesson-option{
-    padding:30px;
-
-    min-height:190px;
-
-    background:white;
-
-    border:1px solid #e2e8f0;
-
-    border-radius:24px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-    box-shadow:
-    0 10px 30px rgba(15,23,42,.05);
-}
-
-.lesson-option:hover{
-    transform:translateY(-5px);
-
-    border-color:#93c5fd;
-}
-
-.lesson-option-icon{
-    font-size:38px;
-
-    margin-bottom:18px;
-}
-
-.lesson-option h2{
-    color:#172554;
-
-    font-size:19px;
-
-    margin-bottom:8px;
-}
-
-.lesson-option p{
-    color:#64748b;
-
-    line-height:1.6;
-
-    font-size:14px;
-}
-
-/* =========================================================
-   QUIZ
-========================================================= */
+/* QUIZ */
 
 .quiz-wrapper{
     max-width:800px;
@@ -1070,351 +751,219 @@ nav{
 
 .quiz-top{
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
-    gap:15px;
-
     margin-bottom:18px;
 }
 
 .quiz-progress-text{
     color:#64748b;
-
     font-size:13px;
-
     font-weight:700;
 }
 
 .quiz-score{
     padding:8px 12px;
-
     border-radius:10px;
-
     background:#eff6ff;
-
     color:#2563eb;
-
     font-size:12px;
-
     font-weight:800;
 }
 
 .quiz-progress{
     height:9px;
-
     background:#e2e8f0;
-
     border-radius:50px;
-
     overflow:hidden;
-
     margin-bottom:22px;
 }
 
 .quiz-progress-fill{
     height:100%;
-
-    width:0%;
-
-    background:
-    linear-gradient(
-        90deg,
-        #2563eb,
-        #7c3aed
-    );
-
-    transition:.3s;
+    background:linear-gradient(90deg,#2563eb,#7c3aed);
 }
 
 .quiz-card{
     background:white;
-
     border:1px solid #e2e8f0;
-
     border-radius:25px;
-
     padding:30px;
-
-    box-shadow:
-    0 12px 35px rgba(15,23,42,.06);
 }
 
 .quiz-question-number{
     color:#2563eb;
-
     font-size:12px;
-
     font-weight:900;
-
-    letter-spacing:1px;
-
     margin-bottom:12px;
 }
 
 .quiz-question{
     color:#172554;
-
     font-size:21px;
-
     line-height:1.5;
-
     margin-bottom:22px;
 }
 
 .quiz-options{
     display:grid;
-
     gap:12px;
 }
 
 .quiz-option{
     width:100%;
-
     padding:17px;
-
     border-radius:15px;
-
     background:#f8fafc;
-
     border:1px solid #e2e8f0;
-
     color:#334155;
-
     text-align:left;
-
     font-weight:700;
-}
-
-.quiz-option:hover{
-    background:#eff6ff;
-
-    border-color:#93c5fd;
-
-    color:#1d4ed8;
-
-    transform:none;
 }
 
 .quiz-option.correct{
     background:#ecfdf5;
-
     border-color:#6ee7b7;
-
     color:#047857;
 }
 
 .quiz-option.wrong{
     background:#fef2f2;
-
     border-color:#fca5a5;
-
     color:#dc2626;
 }
 
 .quiz-next{
     width:100%;
-
     padding:15px;
-
     margin-top:20px;
-
     border-radius:14px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #2563eb,
-        #7c3aed
-    );
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
 }
 
 .quiz-result{
     text-align:center;
-
     padding:40px 25px;
 }
 
 .result-icon{
     font-size:65px;
-
     margin-bottom:15px;
 }
 
 .quiz-result h2{
     color:#172554;
-
     font-size:32px;
-
-    margin-bottom:10px;
 }
 
 .result-score{
     font-size:70px;
-
     color:#2563eb;
-
     font-weight:900;
-
     margin:15px;
 }
 
 .result-message{
     color:#64748b;
-
     line-height:1.7;
 }
 
-/* =========================================================
-   NOTEBOOK
-========================================================= */
+/* NOTEBOOK */
 
 .notebook-layout{
     display:grid;
-
-    grid-template-columns:
-    360px 1fr;
-
+    grid-template-columns:360px 1fr;
     gap:20px;
 }
 
 .notebook-panel,
 .notes-panel{
     background:white;
-
     border:1px solid #e2e8f0;
-
     border-radius:25px;
-
     padding:25px;
-
-    box-shadow:
-    0 10px 30px rgba(15,23,42,.05);
 }
 
 .notebook-panel h2,
 .notes-panel h2{
     color:#172554;
-
     margin-bottom:15px;
 }
 
 .note-title{
     width:100%;
-
     color:#172033;
-
     background:#f8fafc;
-
     border:1px solid #e2e8f0;
-
     margin-bottom:12px;
 }
 
 .note-body{
     width:100%;
-
     color:#172033;
-
     background:#f8fafc;
-
     border:1px solid #e2e8f0;
-
     margin-bottom:12px;
 }
 
 .save-note{
     width:100%;
-
     padding:14px;
-
     border-radius:13px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #2563eb,
-        #7c3aed
-    );
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
 }
 
 .notes-list{
     display:flex;
-
     flex-direction:column;
-
     gap:12px;
 }
 
 .saved-note{
     padding:18px;
-
     border-radius:18px;
-
     background:#f8fafc;
-
     border:1px solid #e2e8f0;
 }
 
 .saved-note h3{
     color:#172554;
-
     margin-bottom:7px;
 }
 
 .saved-note p{
     color:#64748b;
-
     line-height:1.6;
-
     white-space:pre-wrap;
 }
 
 .note-actions{
     display:flex;
-
     justify-content:flex-end;
-
     margin-top:12px;
 }
 
 .delete-note{
     padding:8px 12px;
-
     border-radius:9px;
-
     background:#fef2f2;
-
     color:#dc2626;
-
     border:1px solid #fecaca;
-
     font-size:12px;
 }
 
-/* =========================================================
-   PREMIUM EMPTY
-========================================================= */
-
 .empty{
     text-align:center;
-
     padding:40px;
-
     color:#64748b;
 }
 
 .empty-icon{
     font-size:50px;
-
     margin-bottom:12px;
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
+/* MOBILE */
 
 @media(max-width:750px){
 
@@ -1476,10 +1025,6 @@ nav{
 
 <body>
 
-<!-- =========================================================
-LOGIN SYSTEM
-========================================================= -->
-
 <div id="loginSystem">
 
 <div class="login-container">
@@ -1488,15 +1033,11 @@ LOGIN SYSTEM
 
 <div class="logo-symbol">∑</div>
 
-<h1>
-MATHS<span>MASTER</span>
-</h1>
+<h1>MATHS<span>MASTER</span></h1>
 
 </div>
 
 <div class="login-card">
-
-<!-- WELCOME -->
 
 <div id="welcomeScreen" class="screen active welcome">
 
@@ -1518,9 +1059,6 @@ quizzes and examination preparation.
 
 </div>
 
-
-<!-- NAME -->
-
 <div id="nameScreen" class="screen">
 
 <h2>What's your name?</h2>
@@ -1533,11 +1071,7 @@ Enter your name to continue to Maths Master.
 
 <label>Your Name</label>
 
-<input
-id="nameInput"
-type="text"
-placeholder="Enter your name"
->
+<input id="nameInput" type="text" placeholder="Enter your name">
 
 </div>
 
@@ -1547,23 +1081,16 @@ CONTINUE →
 
 <div id="nameMessage" class="message"></div>
 
-<button
-class="secondary-btn"
-onclick="showScreen('welcomeScreen')"
->
+<button class="secondary-btn" onclick="showScreen('welcomeScreen')">
 ← BACK
 </button>
 
 </div>
 
-
-<!-- CREATE -->
-
 <div id="createPasswordScreen" class="screen">
 
 <h2>
-Welcome,
-<span id="newUserName"></span> 👋
+Welcome, <span id="newUserName"></span> 👋
 </h2>
 
 <p class="description">
@@ -1574,11 +1101,7 @@ Create your Maths Master password.
 
 <label>Create Password</label>
 
-<input
-id="createPassword"
-type="password"
-placeholder="Create password"
->
+<input id="createPassword" type="password" placeholder="Create password">
 
 </div>
 
@@ -1586,11 +1109,7 @@ placeholder="Create password"
 
 <label>Confirm Password</label>
 
-<input
-id="confirmPassword"
-type="password"
-placeholder="Confirm password"
->
+<input id="confirmPassword" type="password" placeholder="Confirm password">
 
 </div>
 
@@ -1598,26 +1117,17 @@ placeholder="Confirm password"
 🔐 Password must contain at least 4 characters.
 </div>
 
-<button
-class="primary-btn"
-onclick="createAccount()"
->
+<button class="primary-btn" onclick="createAccount()">
 CREATE ACCOUNT →
 </button>
 
 <div id="createMessage" class="message"></div>
 
-<button
-class="secondary-btn"
-onclick="showScreen('nameScreen')"
->
+<button class="secondary-btn" onclick="showScreen('nameScreen')">
 ← BACK
 </button>
 
 </div>
-
-
-<!-- LOGIN -->
 
 <div id="loginScreen" class="screen">
 
@@ -1631,11 +1141,7 @@ Enter your password to continue.
 
 <label>Name</label>
 
-<input
-id="loginName"
-type="text"
-readonly
->
+<input id="loginName" type="text" readonly>
 
 </div>
 
@@ -1643,34 +1149,21 @@ readonly
 
 <label>Password</label>
 
-<input
-id="loginPassword"
-type="password"
-placeholder="Enter password"
->
+<input id="loginPassword" type="password" placeholder="Enter password">
 
 </div>
 
-<button
-class="primary-btn"
-onclick="loginUser()"
->
+<button class="primary-btn" onclick="loginUser()">
 LOGIN →
 </button>
 
 <div id="loginMessage" class="message"></div>
 
-<button
-class="secondary-btn"
-onclick="showScreen('nameScreen')"
->
+<button class="secondary-btn" onclick="showScreen('nameScreen')">
 ← USE ANOTHER NAME
 </button>
 
 </div>
-
-
-<!-- SUCCESS -->
 
 <div id="successScreen" class="screen welcome">
 
@@ -1684,10 +1177,7 @@ onclick="showScreen('nameScreen')"
 Your premium Maths Master dashboard is ready.
 </p>
 
-<button
-class="primary-btn"
-onclick="enterWebsite()"
->
+<button class="primary-btn" onclick="enterWebsite()">
 📚 ENTER MATHS MASTER
 </button>
 
@@ -1695,19 +1185,15 @@ onclick="enterWebsite()"
 
 </div>
 
+<!-- WHITE CREDIT -->
 <div class="login-footer">
 © 2026 Maths Master<br>
-<strong>Design by G.V Karthhik</strong>
+<strong>DESIGNED BY G. KARTHIK</strong>
 </div>
 
 </div>
-
 </div>
 
-
-<!-- =========================================================
-MAIN WEBSITE
-========================================================= -->
 
 <div id="mainWebsite" class="hidden">
 
@@ -1728,13 +1214,7 @@ HOME
 </button>
 
 </div>
-
 </nav>
-
-
-<!-- =========================================================
-DASHBOARD
-========================================================= -->
 
 <section id="dashboardPage" class="page active">
 
@@ -1758,18 +1238,11 @@ important questions, quizzes and your own digital notebook.
 
 </div>
 
-
 <div class="dashboard-grid">
 
+<div class="premium-card" onclick="openMainPage('lessonKeyPointsPage')">
 
-<div
-class="premium-card"
-onclick="openMainPage('lessonKeyPointsPage')"
->
-
-<div class="card-icon">
-📖
-</div>
+<div class="card-icon">📖</div>
 
 <h2>
 KEY POINTS & IMPORTANT QUESTIONS
@@ -1784,19 +1257,11 @@ formulas and high-priority SSC questions.
 
 </div>
 
+<div class="premium-card" onclick="openMainPage('sscPage')">
 
-<div
-class="premium-card"
-onclick="openMainPage('sscPage')"
->
+<div class="card-icon">🎯</div>
 
-<div class="card-icon">
-🎯
-</div>
-
-<h2>
-SSC EXAMINATION
-</h2>
+<h2>SSC EXAMINATION</h2>
 
 <p>
 Explore chapter-wise marks, examination strategy
@@ -1807,19 +1272,11 @@ and internal-choice preparation.
 
 </div>
 
+<div class="premium-card" onclick="openQuizChapterPage()">
 
-<div
-class="premium-card"
-onclick="openQuizChapterPage()"
->
+<div class="card-icon">🧠</div>
 
-<div class="card-icon">
-🧠
-</div>
-
-<h2>
-CHAPTER-WISE QUIZ
-</h2>
+<h2>CHAPTER-WISE QUIZ</h2>
 
 <p>
 Take 10-question quizzes and test your preparation
@@ -1830,19 +1287,11 @@ chapter by chapter.
 
 </div>
 
+<div class="premium-card" onclick="openMainPage('notebookPage')">
 
-<div
-class="premium-card"
-onclick="openMainPage('notebookPage')"
->
+<div class="card-icon">📓</div>
 
-<div class="card-icon">
-📓
-</div>
-
-<h2>
-MY DIGITAL NOTEBOOK
-</h2>
+<h2>MY DIGITAL NOTEBOOK</h2>
 
 <p>
 Write your formulas, doubts, revision notes and
@@ -1853,9 +1302,7 @@ important points and save them permanently.
 
 </div>
 
-
 </div>
-
 
 <button class="exit" onclick="logout()">
 🏠 EXIT TO HOME
@@ -1865,10 +1312,6 @@ important points and save them permanently.
 
 </section>
 
-
-<!-- =========================================================
-KEY POINTS CHAPTERS
-========================================================= -->
 
 <section id="lessonKeyPointsPage" class="page light-page">
 
@@ -1880,9 +1323,7 @@ KEY POINTS CHAPTERS
 📚 LESSON MASTER
 </div>
 
-<h1>
-Key Points & Questions
-</h1>
+<h1>Key Points & Questions</h1>
 
 <p>
 Select any chapter to explore premium revision notes,
@@ -1891,15 +1332,9 @@ key concepts and important SSC questions.
 
 </div>
 
-<div
-class="chapter-grid"
-id="keyChapterGrid"
-></div>
+<div class="chapter-grid" id="keyChapterGrid"></div>
 
-<button
-class="back-button"
-onclick="goDashboard()"
->
+<button class="back-button" onclick="goDashboard()">
 ← BACK TO DASHBOARD
 </button>
 
@@ -1907,10 +1342,6 @@ onclick="goDashboard()"
 
 </section>
 
-
-<!-- =========================================================
-SELECTED LESSON
-========================================================= -->
 
 <section id="selectedLessonPage" class="page light-page">
 
@@ -1926,22 +1357,15 @@ SELECTED LESSON
 Real Numbers
 </h1>
 
-<p>
-Choose your study mode.
-</p>
+<p>Choose your study mode.</p>
 
 </div>
 
 <div class="lesson-menu">
 
-<div
-class="lesson-option"
-onclick="showLessonContent('key')"
->
+<div class="lesson-option" onclick="showLessonContent('key')">
 
-<div class="lesson-option-icon">
-💡
-</div>
+<div class="lesson-option-icon">💡</div>
 
 <h2>KEY POINTS</h2>
 
@@ -1952,15 +1376,9 @@ quick revision points.
 
 </div>
 
+<div class="lesson-option" onclick="showLessonContent('important')">
 
-<div
-class="lesson-option"
-onclick="showLessonContent('important')"
->
-
-<div class="lesson-option-icon">
-🔥
-</div>
+<div class="lesson-option-icon">🔥</div>
 
 <h2>IMPORTANT QUESTIONS</h2>
 
@@ -1972,10 +1390,7 @@ Important practice questions for serious SSC preparation.
 
 </div>
 
-<button
-class="back-button"
-onclick="openMainPage('lessonKeyPointsPage')"
->
+<button class="back-button" onclick="openMainPage('lessonKeyPointsPage')">
 ← BACK TO CHAPTERS
 </button>
 
@@ -1983,10 +1398,6 @@ onclick="openMainPage('lessonKeyPointsPage')"
 
 </section>
 
-
-<!-- =========================================================
-LESSON CONTENT
-========================================================= -->
 
 <section id="lessonContentPage" class="page light-page">
 
@@ -1998,22 +1409,15 @@ LESSON CONTENT
 📘 REVISION
 </div>
 
-<h1 id="contentTitle">
-Real Numbers
-</h1>
+<h1 id="contentTitle">Real Numbers</h1>
 
-<p id="contentSubtitle">
-Key Points
-</p>
+<p id="contentSubtitle">Key Points</p>
 
 </div>
 
 <div id="contentArea"></div>
 
-<button
-class="back-button"
-onclick="openMainPage('selectedLessonPage')"
->
+<button class="back-button" onclick="openMainPage('selectedLessonPage')">
 ← BACK TO LESSON MENU
 </button>
 
@@ -2021,10 +1425,6 @@ onclick="openMainPage('selectedLessonPage')"
 
 </section>
 
-
-<!-- =========================================================
-SSC PAGE
-========================================================= -->
 
 <section id="sscPage" class="page light-page">
 
@@ -2036,9 +1436,7 @@ SSC PAGE
 🎯 SSC EXAM MASTER
 </div>
 
-<h1>
-Examination Analysis
-</h1>
+<h1>Examination Analysis</h1>
 
 <p>
 A premium view of chapter marks and preparation strategy.
@@ -2046,69 +1444,36 @@ A premium view of chapter marks and preparation strategy.
 
 </div>
 
-
 <div class="stats-row">
 
 <div class="stat-card">
-
-<span>
-TOTAL CHAPTERS
-</span>
-
-<strong>
-14
-</strong>
-
+<span>TOTAL CHAPTERS</span>
+<strong>14</strong>
 </div>
-
 
 <div class="stat-card">
-
-<span>
-MAX MARKS SHOWN
-</span>
-
-<strong>
-13
-</strong>
-
+<span>MAX MARKS SHOWN</span>
+<strong>13</strong>
 </div>
-
 
 <div class="stat-card">
-
-<span>
-TARGET
-</span>
-
-<strong>
-100
-</strong>
-
+<span>TARGET</span>
+<strong>100</strong>
 </div>
 
 </div>
-
 
 <div class="section-card">
 
-<h2>
-📊 Chapter-wise Marks
-</h2>
+<h2>📊 Chapter-wise Marks</h2>
 
-<div
-class="marks-grid"
-id="marksGrid"
-></div>
+<div class="marks-grid" id="marksGrid"></div>
 
 </div>
 
-
 <div class="section-card">
 
-<h2>
-🎯 Internal Choice Preparation
-</h2>
+<h2>🎯 Internal Choice Preparation</h2>
 
 <p>
 Use the following practice combinations as preparation
@@ -2120,11 +1485,7 @@ prediction of the actual examination paper.
 
 <div id="choiceList"></div>
 
-
-<button
-class="back-button"
-onclick="goDashboard()"
->
+<button class="back-button" onclick="goDashboard()">
 ← BACK TO DASHBOARD
 </button>
 
@@ -2132,10 +1493,6 @@ onclick="goDashboard()"
 
 </section>
 
-
-<!-- =========================================================
-QUIZ CHAPTER SELECTION
-========================================================= -->
 
 <section id="quizChapterPage" class="page light-page">
 
@@ -2147,9 +1504,7 @@ QUIZ CHAPTER SELECTION
 🧠 QUIZ ARENA
 </div>
 
-<h1>
-Choose Your Chapter
-</h1>
+<h1>Choose Your Chapter</h1>
 
 <p>
 Every chapter contains a 10-question practice quiz.
@@ -2157,15 +1512,9 @@ Every chapter contains a 10-question practice quiz.
 
 </div>
 
-<div
-class="chapter-grid"
-id="quizChapterGrid"
-></div>
+<div class="chapter-grid" id="quizChapterGrid"></div>
 
-<button
-class="back-button"
-onclick="goDashboard()"
->
+<button class="back-button" onclick="goDashboard()">
 ← BACK TO DASHBOARD
 </button>
 
@@ -2173,10 +1522,6 @@ onclick="goDashboard()"
 
 </section>
 
-
-<!-- =========================================================
-QUIZ
-========================================================= -->
 
 <section id="quizPage" class="page light-page">
 
@@ -2188,9 +1533,7 @@ QUIZ
 🧠 QUIZ ARENA
 </div>
 
-<h1 id="quizTitle">
-Chapter Quiz
-</h1>
+<h1 id="quizTitle">Chapter Quiz</h1>
 
 <p>
 Answer all 10 questions and check your score.
@@ -2199,15 +1542,10 @@ Answer all 10 questions and check your score.
 </div>
 
 <div class="quiz-wrapper">
-
 <div id="quizBox"></div>
-
 </div>
 
-<button
-class="back-button"
-onclick="openQuizChapterPage()"
->
+<button class="back-button" onclick="openQuizChapterPage()">
 ← BACK TO CHAPTER QUIZZES
 </button>
 
@@ -2215,10 +1553,6 @@ onclick="openQuizChapterPage()"
 
 </section>
 
-
-<!-- =========================================================
-NOTEBOOK
-========================================================= -->
 
 <section id="notebookPage" class="page light-page">
 
@@ -2230,68 +1564,39 @@ NOTEBOOK
 📓 DIGITAL NOTEBOOK
 </div>
 
-<h1>
-My Notebook
-</h1>
+<h1>My Notebook</h1>
 
-<p>
-Create your own private revision notes.
-</p>
+<p>Create your own private revision notes.</p>
 
 </div>
 
-
 <div class="notebook-layout">
-
 
 <div class="notebook-panel">
 
-<h2>
-✍️ Write a Note
-</h2>
+<h2>✍️ Write a Note</h2>
 
-<input
-id="noteTitle"
-class="note-title"
-placeholder="Note title"
-/>
+<input id="noteTitle" class="note-title" placeholder="Note title">
 
-<textarea
-id="noteBody"
-class="note-body"
-placeholder="Write your Maths notes here..."
-></textarea>
+<textarea id="noteBody" class="note-body" placeholder="Write your Maths notes here..."></textarea>
 
-<button
-class="save-note"
-onclick="saveNote()"
->
+<button class="save-note" onclick="saveNote()">
 💾 SAVE NOTE
 </button>
 
 </div>
 
-
 <div class="notes-panel">
 
-<h2>
-📚 Saved Notes
-</h2>
+<h2>📚 Saved Notes</h2>
 
-<div
-id="notesList"
-class="notes-list"
-></div>
+<div id="notesList" class="notes-list"></div>
 
 </div>
 
 </div>
 
-
-<button
-class="back-button"
-onclick="goDashboard()"
->
+<button class="back-button" onclick="goDashboard()">
 ← BACK TO DASHBOARD
 </button>
 
@@ -2304,104 +1609,24 @@ onclick="goDashboard()"
 
 <script>
 
-/* =========================================================
-CHAPTER DATA
-========================================================= */
-
-const chapters = [
-
-{
-name:"Real Numbers",
-marks:9,
-calculation:"1 + 8 = 9 marks"
-},
-
-{
-name:"Polynomials",
-marks:8,
-calculation:"1 + 1 + 2 + 4 = 8 marks"
-},
-
-{
-name:"Pair of Linear Equations in Two Variables",
-marks:9,
-calculation:"1 + 8 = 9 marks"
-},
-
-{
-name:"Quadratic Equations",
-marks:7,
-calculation:"1 + 2 + 4 = 7 marks"
-},
-
-{
-name:"Arithmetic Progressions",
-marks:13,
-calculation:"1 + 4 + 8 = 13 marks"
-},
-
-{
-name:"Triangles",
-marks:11,
-calculation:"1 + 2 + 8 = 11 marks"
-},
-
-{
-name:"Coordinate Geometry",
-marks:10,
-calculation:"2 + 8 = 10 marks"
-},
-
-{
-name:"Introduction to Trigonometry",
-marks:7,
-calculation:"1 + 2 + 4 = 7 marks"
-},
-
-{
-name:"Some Applications of Trigonometry",
-marks:11,
-calculation:"1 + 2 + 8 = 11 marks"
-},
-
-{
-name:"Circles",
-marks:7,
-calculation:"1 + 2 + 4 = 7 marks"
-},
-
-{
-name:"Areas Related to Circles",
-marks:8,
-calculation:"8 = 8 marks"
-},
-
-{
-name:"Surface Areas and Volumes",
-marks:7,
-calculation:"1 + 2 + 4 = 7 marks"
-},
-
-{
-name:"Statistics",
-marks:12,
-calculation:"4 + 8 = 12 marks"
-},
-
-{
-name:"Probability",
-marks:13,
-calculation:"1 + 4 + 8 = 13 marks"
-}
-
+const chapters=[
+{name:"Real Numbers",marks:9,calculation:"1 + 8 = 9 marks"},
+{name:"Polynomials",marks:8,calculation:"1 + 1 + 2 + 4 = 8 marks"},
+{name:"Pair of Linear Equations in Two Variables",marks:9,calculation:"1 + 8 = 9 marks"},
+{name:"Quadratic Equations",marks:7,calculation:"1 + 2 + 4 = 7 marks"},
+{name:"Arithmetic Progressions",marks:13,calculation:"1 + 4 + 8 = 13 marks"},
+{name:"Triangles",marks:11,calculation:"1 + 2 + 8 = 11 marks"},
+{name:"Coordinate Geometry",marks:10,calculation:"2 + 8 = 10 marks"},
+{name:"Introduction to Trigonometry",marks:7,calculation:"1 + 2 + 4 = 7 marks"},
+{name:"Some Applications of Trigonometry",marks:11,calculation:"1 + 2 + 8 = 11 marks"},
+{name:"Circles",marks:7,calculation:"1 + 2 + 4 = 7 marks"},
+{name:"Areas Related to Circles",marks:8,calculation:"8 = 8 marks"},
+{name:"Surface Areas and Volumes",marks:7,calculation:"1 + 2 + 4 = 7 marks"},
+{name:"Statistics",marks:12,calculation:"4 + 8 = 12 marks"},
+{name:"Probability",marks:13,calculation:"1 + 4 + 8 = 13 marks"}
 ];
 
-
-/* =========================================================
-LESSON CONTENT DATA
-========================================================= */
-
-const lessonData = {
+const lessonData={
 
 "Real Numbers":{
 key:[
@@ -2449,995 +1674,442 @@ questions:[
 "Determine the number of zeros from a graph.",
 "Solve a problem involving zeroes and coefficients."
 ]
-},
-
-"Pair of Linear Equations in Two Variables":{
-key:[
-"A linear equation in two variables has the form ax+by+c=0.",
-"A pair can have one solution, no solution or infinitely many solutions.",
-"Graphical method represents equations as straight lines.",
-"Unique solution occurs when lines intersect.",
-"No solution occurs when lines are parallel.",
-"Infinitely many solutions occur when lines coincide.",
-"Substitution and elimination methods are important."
-],
-questions:[
-"Solve a pair using substitution.",
-"Solve using elimination.",
-"Solve using graphical method.",
-"Find the value of an unknown parameter.",
-"Determine whether a pair has a unique solution.",
-"Determine whether a pair has no solution.",
-"Determine whether a pair has infinitely many solutions.",
-"Form equations from a word problem.",
-"Solve a mixture problem.",
-"Solve an age-related problem."
-]
-},
-
-"Quadratic Equations":{
-key:[
-"A quadratic equation has the form ax²+bx+c=0.",
-"Here a ≠ 0.",
-"Quadratic equations can be solved by factorisation.",
-"Completing the square is another method.",
-"Quadratic formula is x=(-b±√(b²-4ac))/2a.",
-"Discriminant is b²-4ac.",
-"Discriminant determines the nature of roots."
-],
-questions:[
-"Solve a quadratic equation by factorisation.",
-"Solve using the quadratic formula.",
-"Find the discriminant.",
-"Determine the nature of roots.",
-"Find an unknown value for equal roots.",
-"Form a quadratic equation from given roots.",
-"Solve a word problem using quadratic equations.",
-"Use completing the square.",
-"Find the sum and product of roots.",
-"Verify the obtained roots."
-]
-},
-
-"Arithmetic Progressions":{
-key:[
-"An arithmetic progression has a common difference.",
-"nth term is a+(n-1)d.",
-"Sum of first n terms is n/2[2a+(n-1)d].",
-"Common difference is found by subtracting consecutive terms.",
-"Identify whether a sequence is an AP.",
-"Find missing terms using AP formulas.",
-"Word problems involving AP are important."
-],
-questions:[
-"Find the nth term of an AP.",
-"Find the common difference.",
-"Find the sum of first n terms.",
-"Find a missing term.",
-"Find the number of terms.",
-"Find the last term.",
-"Find the sum when first and last terms are given.",
-"Solve a word problem based on AP.",
-"Find whether a sequence is an AP.",
-"Find the middle term of an AP."
-]
-},
-
-"Triangles":{
-key:[
-"Similarity of triangles is a major concept.",
-"AA, SAS and SSS are important similarity criteria.",
-"Corresponding sides of similar triangles are proportional.",
-"Basic proportionality theorem is important.",
-"Pythagoras theorem is frequently used.",
-"Understand converse of Pythagoras theorem.",
-"Proof-based questions are important."
-],
-questions:[
-"Prove two triangles are similar.",
-"Use AA similarity criterion.",
-"Use SAS similarity criterion.",
-"Use SSS similarity criterion.",
-"Apply the Basic Proportionality Theorem.",
-"Prove a proportionality result.",
-"Apply Pythagoras theorem.",
-"Use the converse of Pythagoras theorem.",
-"Find an unknown side using similar triangles.",
-"Prove a theorem related to triangles."
-]
-},
-
-"Coordinate Geometry":{
-key:[
-"Distance formula is √[(x₂-x₁)²+(y₂-y₁)²].",
-"Midpoint formula is ((x₁+x₂)/2,(y₁+y₂)/2).",
-"Section formula divides a line segment in a given ratio.",
-"Coordinates are written as (x,y).",
-"Understand signs in different quadrants.",
-"Distance and midpoint problems are important."
-],
-questions:[
-"Find distance between two points.",
-"Find midpoint of a line segment.",
-"Use section formula.",
-"Find a point dividing a segment in a given ratio.",
-"Prove three points are collinear.",
-"Find the coordinates of a missing point.",
-"Find the distance from origin.",
-"Apply coordinate geometry to a triangle.",
-"Find a ratio using section formula.",
-"Find the midpoint and verify distances."
-]
-},
-
-"Introduction to Trigonometry":{
-key:[
-"Trigonometric ratios are sin, cos and tan.",
-"sin θ = perpendicular/hypotenuse.",
-"cos θ = base/hypotenuse.",
-"tan θ = perpendicular/base.",
-"Reciprocal ratios include cosec, sec and cot.",
-"Use standard values of 0°,30°,45°,60°,90°.",
-"Trigonometric identities must be memorised."
-],
-questions:[
-"Find trigonometric ratios from a right triangle.",
-"Evaluate standard trigonometric values.",
-"Prove a trigonometric identity.",
-"Find sin θ when cos θ is given.",
-"Find tan θ using sin and cos.",
-"Solve a simple trigonometric expression.",
-"Use complementary angle relationships.",
-"Find missing side using a trigonometric ratio.",
-"Evaluate a standard-angle expression.",
-"Verify a trigonometric identity."
-]
-},
-
-"Some Applications of Trigonometry":{
-key:[
-"Applications mainly involve heights and distances.",
-"Angles of elevation and depression are important.",
-"Draw a clear right-triangle diagram.",
-"Choose the correct trigonometric ratio.",
-"Use tan frequently for height-distance problems.",
-"Keep units consistent.",
-"Read the question carefully before forming the triangle."
-],
-questions:[
-"Find height using angle of elevation.",
-"Find distance from a tower.",
-"Solve an angle of depression problem.",
-"Find height of a building.",
-"Find length of a shadow.",
-"Find distance between two objects.",
-"Draw and interpret a height-distance diagram.",
-"Use tan in an application problem.",
-"Solve a two-step height problem.",
-"Find an unknown angle."
-]
-},
-
-"Circles":{
-key:[
-"Tangent touches a circle at exactly one point.",
-"Radius through point of contact is perpendicular to tangent.",
-"Tangents drawn from an external point are equal.",
-"Understand tangent properties.",
-"Use theorems carefully in proofs.",
-"Diagram construction is important."
-],
-questions:[
-"Prove radius is perpendicular to tangent.",
-"Prove tangents from an external point are equal.",
-"Find tangent length.",
-"Use tangent-radius theorem.",
-"Prove a circle-related result.",
-"Find an unknown angle.",
-"Apply tangent properties.",
-"Construct a tangent-related proof.",
-"Solve a numerical tangent problem.",
-"Use equal tangent lengths."
-]
-},
-
-"Areas Related to Circles":{
-key:[
-"Area of circle is πr².",
-"Circumference is 2πr.",
-"Area of sector is θ/360 × πr².",
-"Length of arc is θ/360 × 2πr.",
-"Use correct units.",
-"Segment and sector problems require careful diagrams."
-],
-questions:[
-"Find area of a circle.",
-"Find circumference.",
-"Find area of a sector.",
-"Find arc length.",
-"Find area of a shaded region.",
-"Find radius from area.",
-"Find area of a semicircle.",
-"Solve a sector word problem.",
-"Calculate perimeter of a sector.",
-"Solve a combined-shape problem."
-]
-},
-
-"Surface Areas and Volumes":{
-key:[
-"Know formulas for cube, cuboid, cylinder, cone and sphere.",
-"Total surface area includes all required surfaces.",
-"Curved surface area excludes bases.",
-"Volume measures space occupied.",
-"Keep units consistent.",
-"Conversion between cm³ and litres may be required."
-],
-questions:[
-"Find TSA of a cuboid.",
-"Find volume of a cylinder.",
-"Find CSA of a cylinder.",
-"Find volume of a cone.",
-"Find surface area of a sphere.",
-"Find volume of a sphere.",
-"Solve a combination-of-solids problem.",
-"Find missing radius or height.",
-"Convert units in a volume problem.",
-"Solve a real-life volume problem."
-]
-},
-
-"Statistics":{
-key:[
-"Mean, median and mode are measures of central tendency.",
-"For grouped data, use appropriate formulas.",
-"Cumulative frequency is important for median.",
-"Class intervals must be handled carefully.",
-"Use assumed mean or step-deviation when appropriate.",
-"Check calculations carefully."
-],
-questions:[
-"Find mean of grouped data.",
-"Find median.",
-"Find mode.",
-"Find missing frequency.",
-"Use assumed mean method.",
-"Use step-deviation method.",
-"Construct cumulative frequency.",
-"Find median class.",
-"Find modal class.",
-"Solve a statistics word problem."
-]
-},
-
-"Probability":{
-key:[
-"Probability measures the chance of an event.",
-"P(E)=favourable outcomes/total outcomes.",
-"Probability lies between 0 and 1.",
-"Impossible event has probability 0.",
-"Sure event has probability 1.",
-"Complementary probability is P(not E)=1-P(E).",
-"List outcomes carefully."
-],
-questions:[
-"Find probability of a simple event.",
-"Find probability using a die.",
-"Find probability using coins.",
-"Find probability using cards.",
-"Find complementary probability.",
-"Find probability of an impossible event.",
-"Find probability of a sure event.",
-"Solve a real-life probability problem.",
-"Find favourable outcomes.",
-"Verify probability lies between 0 and 1."
-]
 }
 
 };
 
-
-/* =========================================================
-INTERNAL CHOICE DATA
-========================================================= */
-
 const choices=[
-
 ["Q29","8 MARKS","Real Numbers","Arithmetic Progressions"],
-
 ["Q30","8 MARKS","Statistics","Triangles"],
-
 ["Q31","8 MARKS","Coordinate Geometry","Areas Related to Circles"],
-
 ["Q32","8 MARKS","Probability","Surface Areas and Volumes"],
-
 ["Q33","8 MARKS","Pair of Linear Equations","Applications of Trigonometry"]
-
 ];
-
-
-/* =========================================================
-CREATE CHAPTER GRIDS
-========================================================= */
-
-function createChapterCards(containerId,clickFunction){
-
-    const container=
-    document.getElementById(containerId);
-
-    container.innerHTML="";
-
-    chapters.forEach((chapter,index)=>{
-
-        const card=
-        document.createElement("div");
-
-        card.className="chapter-card";
-
-        card.onclick=()=>{
-            clickFunction(index);
-        };
-
-        card.innerHTML=`
-
-            <div class="chapter-number">
-                ${String(index+1).padStart(2,"0")}
-            </div>
-
-            <div class="chapter-info">
-
-                <h3>
-                    ${chapter.name}
-                </h3>
-
-                <span>
-                    ${chapter.calculation}
-                </span>
-
-            </div>
-
-            <div class="chapter-arrow">
-                →
-            </div>
-
-        `;
-
-        container.appendChild(card);
-
-    });
-
-}
-
-
-/* =========================================================
-MARKS GRID
-========================================================= */
-
-function createMarksGrid(){
-
-    const grid=
-    document.getElementById("marksGrid");
-
-    grid.innerHTML="";
-
-    const max=
-    Math.max(...chapters.map(x=>x.marks));
-
-    chapters.forEach(chapter=>{
-
-        const card=
-        document.createElement("div");
-
-        card.className="marks-card";
-
-        const percentage=
-        Math.round(
-            chapter.marks/max*100
-        );
-
-        card.innerHTML=`
-
-            <div class="marks-top">
-
-                <h3>
-                    ${chapter.name}
-                </h3>
-
-                <div class="marks-value">
-                    ${chapter.marks} Marks
-                </div>
-
-            </div>
-
-            <div class="marks-bar">
-
-                <div
-                class="marks-fill"
-                style="width:${percentage}%"
-                ></div>
-
-            </div>
-
-        `;
-
-        grid.appendChild(card);
-
-    });
-
-}
-
-
-/* =========================================================
-CHOICE LIST
-========================================================= */
-
-function createChoiceList(){
-
-    const container=
-    document.getElementById("choiceList");
-
-    container.innerHTML="";
-
-    choices.forEach(choice=>{
-
-        const card=
-        document.createElement("div");
-
-        card.className="choice-card";
-
-        card.innerHTML=`
-
-            <div class="choice-header">
-
-                <strong>
-                    ${choice[0]}
-                </strong>
-
-                <div class="choice-mark">
-                    ${choice[1]}
-                </div>
-
-            </div>
-
-            <div class="choice-options">
-
-                <div class="choice-option option-a">
-                    ${choice[2]}
-                </div>
-
-                <div class="or">
-                    OR
-                </div>
-
-                <div class="choice-option option-b">
-                    ${choice[3]}
-                </div>
-
-            </div>
-
-        `;
-
-        container.appendChild(card);
-
-    });
-
-}
-
-
-/* =========================================================
-LOGIN
-========================================================= */
 
 function showScreen(id){
 
-    document
-    .querySelectorAll("#loginSystem .screen")
-    .forEach(screen=>{
-        screen.classList.remove("active");
-    });
+document.querySelectorAll("#loginSystem .screen")
+.forEach(screen=>screen.classList.remove("active"));
 
-    document
-    .getElementById(id)
-    .classList.add("active");
+document.getElementById(id).classList.add("active");
+
 }
-
 
 function showNameScreen(){
 
-    document.getElementById("nameInput").value="";
-
-    document.getElementById("nameMessage")
-    .textContent="";
-
-    showScreen("nameScreen");
-
-    setTimeout(()=>{
-        document
-        .getElementById("nameInput")
-        .focus();
-    },100);
+document.getElementById("nameInput").value="";
+document.getElementById("nameMessage").textContent="";
+showScreen("nameScreen");
 
 }
-
 
 function checkName(){
 
-    const name=
-    document
-    .getElementById("nameInput")
-    .value.trim();
+const name=document.getElementById("nameInput").value.trim();
+const message=document.getElementById("nameMessage");
 
-    const message=
-    document
-    .getElementById("nameMessage");
+if(name===""){
+message.textContent="⚠️ Please enter your name.";
+return;
+}
 
-    if(name===""){
+if(name.length<2){
+message.textContent="⚠️ Name must contain at least 2 characters.";
+return;
+}
 
-        message.textContent=
-        "⚠️ Please enter your name.";
+const key="mathsMaster_"+name.toLowerCase();
+const account=localStorage.getItem(key);
 
-        return;
-    }
+if(account){
 
-    if(name.length<2){
+document.getElementById("loginName").value=name;
+document.getElementById("loginPassword").value="";
+document.getElementById("loginMessage").textContent="";
+showScreen("loginScreen");
 
-        message.textContent=
-        "⚠️ Name must contain at least 2 characters.";
+}else{
 
-        return;
-    }
-
-    const key=
-    "mathsMaster_"+name.toLowerCase();
-
-    const account=
-    localStorage.getItem(key);
-
-    if(account){
-
-        document
-        .getElementById("loginName")
-        .value=name;
-
-        document
-        .getElementById("loginPassword")
-        .value="";
-
-        document
-        .getElementById("loginMessage")
-        .textContent="";
-
-        showScreen("loginScreen");
-
-    }else{
-
-        document
-        .getElementById("newUserName")
-        .textContent=name;
-
-        document
-        .getElementById("createPassword")
-        .value="";
-
-        document
-        .getElementById("confirmPassword")
-        .value="";
-
-        document
-        .getElementById("createMessage")
-        .textContent="";
-
-        showScreen("createPasswordScreen");
-
-    }
+document.getElementById("newUserName").textContent=name;
+document.getElementById("createPassword").value="";
+document.getElementById("confirmPassword").value="";
+document.getElementById("createMessage").textContent="";
+showScreen("createPasswordScreen");
 
 }
 
+}
 
 function createAccount(){
 
-    const name=
-    document
-    .getElementById("newUserName")
-    .textContent.trim();
+const name=document.getElementById("newUserName").textContent.trim();
+const password=document.getElementById("createPassword").value;
+const confirm=document.getElementById("confirmPassword").value;
+const message=document.getElementById("createMessage");
 
-    const password=
-    document
-    .getElementById("createPassword")
-    .value;
-
-    const confirm=
-    document
-    .getElementById("confirmPassword")
-    .value;
-
-    const message=
-    document
-    .getElementById("createMessage");
-
-    if(password.length<4){
-
-        message.textContent=
-        "⚠️ Password must contain at least 4 characters.";
-
-        return;
-    }
-
-    if(password!==confirm){
-
-        message.textContent=
-        "❌ Passwords do not match.";
-
-        return;
-    }
-
-    const account={
-        name:name,
-        password:password,
-        created:new Date().toISOString()
-    };
-
-    localStorage.setItem(
-        "mathsMaster_"+name.toLowerCase(),
-        JSON.stringify(account)
-    );
-
-    localStorage.setItem(
-        "mathsMasterLoggedUser",
-        name
-    );
-
-    showScreen("successScreen");
-
+if(password.length<4){
+message.textContent="⚠️ Password must contain at least 4 characters.";
+return;
 }
 
+if(password!==confirm){
+message.textContent="❌ Passwords do not match.";
+return;
+}
+
+const account={
+name:name,
+password:password,
+created:new Date().toISOString()
+};
+
+localStorage.setItem(
+"mathsMaster_"+name.toLowerCase(),
+JSON.stringify(account)
+);
+
+localStorage.setItem(
+"mathsMasterLoggedUser",
+name
+);
+
+showScreen("successScreen");
+
+}
 
 function loginUser(){
 
-    const name=
-    document
-    .getElementById("loginName")
-    .value.trim();
+const name=document.getElementById("loginName").value.trim();
+const password=document.getElementById("loginPassword").value;
+const message=document.getElementById("loginMessage");
 
-    const password=
-    document
-    .getElementById("loginPassword")
-    .value;
+const stored=localStorage.getItem(
+"mathsMaster_"+name.toLowerCase()
+);
 
-    const message=
-    document
-    .getElementById("loginMessage");
+if(!stored){
+message.textContent="❌ Account not found.";
+return;
+}
 
-    const stored=
-    localStorage.getItem(
-        "mathsMaster_"+name.toLowerCase()
-    );
+const account=JSON.parse(stored);
 
-    if(!stored){
+if(password===account.password){
 
-        message.textContent=
-        "❌ Account not found.";
+localStorage.setItem(
+"mathsMasterLoggedUser",
+account.name
+);
 
-        return;
-    }
+showScreen("successScreen");
 
-    const account=
-    JSON.parse(stored);
+}else{
 
-    if(password===account.password){
-
-        localStorage.setItem(
-            "mathsMasterLoggedUser",
-            account.name
-        );
-
-        showScreen("successScreen");
-
-    }else{
-
-        message.textContent=
-        "❌ Incorrect password.";
-
-        document
-        .getElementById("loginPassword")
-        .value="";
-
-    }
+message.textContent="❌ Incorrect password.";
+document.getElementById("loginPassword").value="";
 
 }
 
-
-/* =========================================================
-ENTER WEBSITE
-========================================================= */
+}
 
 function enterWebsite(){
 
-    const user=
-    localStorage.getItem(
-        "mathsMasterLoggedUser"
-    );
+const user=localStorage.getItem(
+"mathsMasterLoggedUser"
+);
 
-    if(user){
+if(user){
 
-        document
-        .getElementById("username")
-        .textContent=user;
-
-        document
-        .getElementById("heroUsername")
-        .textContent=user;
-
-    }
-
-    document
-    .getElementById("loginSystem")
-    .classList.add("hidden");
-
-    document
-    .getElementById("mainWebsite")
-    .classList.remove("hidden");
-
-    goDashboard();
+document.getElementById("username").textContent=user;
+document.getElementById("heroUsername").textContent=user;
 
 }
 
+document.getElementById("loginSystem").classList.add("hidden");
+document.getElementById("mainWebsite").classList.remove("hidden");
 
-/* =========================================================
-PAGE NAVIGATION
-========================================================= */
+goDashboard();
+
+}
 
 function openMainPage(id){
 
-    document
-    .querySelectorAll("#mainWebsite .page")
-    .forEach(page=>{
-        page.classList.remove("active");
-    });
+document.querySelectorAll("#mainWebsite .page")
+.forEach(page=>page.classList.remove("active"));
 
-    document
-    .getElementById(id)
-    .classList.add("active");
+document.getElementById(id).classList.add("active");
 
-    window.scrollTo(0,0);
+window.scrollTo(0,0);
 
 }
-
 
 function goDashboard(){
-
-    openMainPage("dashboardPage");
-
+openMainPage("dashboardPage");
 }
-
 
 function logout(){
 
-    localStorage.removeItem(
-        "mathsMasterLoggedUser"
-    );
+localStorage.removeItem("mathsMasterLoggedUser");
 
-    document
-    .getElementById("mainWebsite")
-    .classList.add("hidden");
+document.getElementById("mainWebsite").classList.add("hidden");
+document.getElementById("loginSystem").classList.remove("hidden");
 
-    document
-    .getElementById("loginSystem")
-    .classList.remove("hidden");
-
-    showScreen("welcomeScreen");
+showScreen("welcomeScreen");
 
 }
 
+function createChapterCards(containerId,clickFunction){
 
-/* =========================================================
-LESSONS
-========================================================= */
+const container=document.getElementById(containerId);
+container.innerHTML="";
+
+chapters.forEach((chapter,index)=>{
+
+const card=document.createElement("div");
+
+card.className="chapter-card";
+
+card.onclick=()=>{
+clickFunction(index);
+};
+
+card.innerHTML=`
+
+<div class="chapter-number">
+${String(index+1).padStart(2,"0")}
+</div>
+
+<div class="chapter-info">
+
+<h3>
+${chapter.name}
+</h3>
+
+<span>
+${chapter.calculation}
+</span>
+
+</div>
+
+<div class="chapter-arrow">
+→
+</div>
+
+`;
+
+container.appendChild(card);
+
+});
+
+}
+
+function createMarksGrid(){
+
+const grid=document.getElementById("marksGrid");
+grid.innerHTML="";
+
+const max=Math.max(...chapters.map(x=>x.marks));
+
+chapters.forEach(chapter=>{
+
+const card=document.createElement("div");
+
+card.className="marks-card";
+
+const percentage=Math.round(
+chapter.marks/max*100
+);
+
+card.innerHTML=`
+
+<div class="marks-top">
+
+<h3>
+${chapter.name}
+</h3>
+
+<div class="marks-value">
+${chapter.marks} Marks
+</div>
+
+</div>
+
+<div class="marks-bar">
+
+<div
+class="marks-fill"
+style="width:${percentage}%"
+></div>
+
+</div>
+
+`;
+
+grid.appendChild(card);
+
+});
+
+}
+
+function createChoiceList(){
+
+const container=document.getElementById("choiceList");
+
+container.innerHTML="";
+
+choices.forEach(choice=>{
+
+const card=document.createElement("div");
+
+card.className="choice-card";
+
+card.innerHTML=`
+
+<div class="choice-header">
+
+<strong>
+${choice[0]}
+</strong>
+
+<div class="choice-mark">
+${choice[1]}
+</div>
+
+</div>
+
+<div class="choice-options">
+
+<div class="choice-option option-a">
+${choice[2]}
+</div>
+
+<div class="or">
+OR
+</div>
+
+<div class="choice-option option-b">
+${choice[3]}
+</div>
+
+</div>
+
+`;
+
+container.appendChild(card);
+
+});
+
+}
 
 let selectedLessonIndex=0;
 
-
 function openLesson(index){
 
-    selectedLessonIndex=index;
+selectedLessonIndex=index;
 
-    document
-    .getElementById("selectedLessonTitle")
-    .textContent=
-    chapters[index].name;
+document.getElementById("selectedLessonTitle")
+.textContent=chapters[index].name;
 
-    openMainPage(
-        "selectedLessonPage"
-    );
+openMainPage("selectedLessonPage");
 
 }
-
 
 function showLessonContent(type){
 
-    const chapter=
-    chapters[selectedLessonIndex].name;
+const chapter=chapters[selectedLessonIndex].name;
+const data=lessonData[chapter];
 
-    const data=
-    lessonData[chapter];
+document.getElementById("contentTitle")
+.textContent=chapter;
 
-    document
-    .getElementById("contentTitle")
-    .textContent=chapter;
+document.getElementById("contentSubtitle")
+.textContent=
+type==="key"
+?"Key Points"
+:"Most Important Questions";
 
-    document
-    .getElementById("contentSubtitle")
-    .textContent=
-    type==="key"
-    ? "Key Points"
-    : "Most Important Questions";
+const area=document.getElementById("contentArea");
 
-    const area=
-    document
-    .getElementById("contentArea");
+area.innerHTML="";
 
-    area.innerHTML="";
+if(!data){
 
+area.innerHTML=`
 
-    if(!data){
+<div class="section-card">
 
-        area.innerHTML=`
+<h2>
+Content Coming Soon
+</h2>
 
-        <div class="section-card">
+<p>
+More premium study material will be added
+for this chapter.
+</p>
 
-            <h2>
-                Content Coming Soon
-            </h2>
+</div>
 
-            <p>
-                More premium study material will be added
-                for this chapter.
-            </p>
+`;
 
-        </div>
+}else{
 
-        `;
+if(type==="key"){
 
-    }else{
+const box=document.createElement("div");
 
-        if(type==="key"){
+box.className="section-card";
 
-            const box=
-            document.createElement("div");
+let html=`
+<h2>💡 Quick Revision Points</h2>
+<ul>
+`;
 
-            box.className="section-card";
+data.key.forEach(point=>{
+html+=`<li>${point}</li>`;
+});
 
-            let html=`
-                <h2>
-                    💡 Quick Revision Points
-                </h2>
-                <ul>
-            `;
+html+=`</ul>`;
 
-            data.key.forEach(point=>{
+box.innerHTML=html;
 
-                html+=`
-                    <li>${point}</li>
-                `;
+area.appendChild(box);
 
-            });
+}else{
 
-            html+=`
-                </ul>
-            `;
+data.questions.forEach((question,index)=>{
 
-            box.innerHTML=html;
+const card=document.createElement("div");
 
-            area.appendChild(box);
+card.className="question-card";
 
-        }else{
+card.innerHTML=`
 
-            data.questions.forEach(
-            (question,index)=>{
+<span class="question-number">
+${index+1}
+</span>
 
-                const card=
-                document.createElement("div");
+<strong>
+${question}
+</strong>
 
-                card.className=
-                "question-card";
+`;
 
-                card.innerHTML=`
+area.appendChild(card);
 
-                    <span class="question-number">
-                        ${index+1}
-                    </span>
-
-                    <strong>
-                        ${question}
-                    </strong>
-
-                `;
-
-                area.appendChild(card);
-
-            });
-
-        }
-
-    }
-
-    openMainPage(
-        "lessonContentPage"
-    );
+});
 
 }
 
+}
 
-/* =========================================================
-QUIZ SYSTEM
-========================================================= */
+openMainPage("lessonContentPage");
+
+}
 
 let quizChapterIndex=0;
 let quizQuestionIndex=0;
 let quizScore=0;
 let quizAnswered=false;
-
-
-/* Generate MCQ choices automatically */
-
-function generateQuizQuestions(chapter){
-
-    const data=
-    lessonData[chapter];
-
-    if(!data) return [];
-
-    const questions=[];
-
-    data.questions.forEach(
-    (question,index)=>{
-
-        const correct=
-        "Practice";
-
-        const options=[
-            correct,
-            "Revision",
-            "None",
-            "Not applicable"
-        ];
-
-        const shift=
-        index%4;
-
-        const shuffled=
-        [
-            options[shift],
-            options[(shift+1)%4],
-            options[(shift+2)%4],
-            options[(shift+3)%4]
-        ];
-
-        questions.push({
-
-            question:
-            question,
-
-            answer:
-            correct,
-
-            options:
-            shuffled
-
-        });
-
-    });
-
-    return questions;
-
-}
-
-
-/*
-For a real educational quiz, use
-the answer data below for the first
-questions. More can be expanded later.
-*/
 
 const quizData={
 
@@ -3465,795 +2137,458 @@ const quizData={
 ["Graphical zeros are represented by?","x-intercepts"],
 ["Polynomial division uses?","Division algorithm"],
 ["The coefficient of x² in ax²+bx+c is?","a"]
-],
-
-"Pair of Linear Equations in Two Variables":[
-["A linear equation in two variables has degree?","1"],
-["Two intersecting lines have?","One solution"],
-["Parallel lines have?","No solution"],
-["Coincident lines have?","Infinitely many solutions"],
-["A common method is?","Substitution"],
-["Another common method is?","Elimination"],
-["Graph of a linear equation is a?","Straight line"],
-["Variables are usually?","x and y"],
-["Unique solution means?","One solution"],
-["A pair of equations contains?","Two equations"]
-],
-
-"Quadratic Equations":[
-["Standard form is?","ax²+bx+c=0"],
-["Quadratic formula is?","(-b±√(b²-4ac))/2a"],
-["Discriminant is?","b²-4ac"],
-["Degree of quadratic equation is?","2"],
-["D > 0 gives?","Two distinct real roots"],
-["D = 0 gives?","Equal real roots"],
-["D < 0 gives?","No real roots"],
-["a must be?","Non-zero"],
-["One solving method is?","Factorisation"],
-["Another method is?","Completing the square"]
-],
-
-"Arithmetic Progressions":[
-["Difference between consecutive terms is?","Common difference"],
-["nth term is?","a+(n-1)d"],
-["First term is represented by?","a"],
-["Common difference is represented by?","d"],
-["Number of terms is represented by?","n"],
-["Sum formula is?","n/2[2a+(n-1)d]"],
-["An AP has a?","Constant difference"],
-["Sequence 2,4,6,8 has d=?","2"],
-["First term of 5,8,11 is?","5"],
-["The 10th term uses?","a+9d"]
-],
-
-"Triangles":[
-["AA is a criterion for?","Similarity"],
-["SSS stands for?","Side-Side-Side"],
-["SAS stands for?","Side-Angle-Side"],
-["Similar triangles have proportional?","Corresponding sides"],
-["Pythagoras theorem applies to?","Right triangles"],
-["In a right triangle, longest side is?","Hypotenuse"],
-["BPT stands for?","Basic Proportionality Theorem"],
-["AA uses how many angles?","Two"],
-["Similar triangles have equal corresponding?","Angles"],
-["Pythagoras formula is?","a²+b²=c²"]
-],
-
-"Coordinate Geometry":[
-["Coordinates are written as?","(x,y)"],
-["Distance formula contains?","Square root"],
-["Midpoint formula averages?","Coordinates"],
-["Origin is?","(0,0)"],
-["x-coordinate is called?","Abscissa"],
-["y-coordinate is called?","Ordinate"],
-["Distance formula is?","√[(x₂-x₁)²+(y₂-y₁)²]"],
-["Midpoint x-coordinate is?","(x₁+x₂)/2"],
-["Points on x-axis have y=?","0"],
-["Points on y-axis have x=?","0"]
-],
-
-"Introduction to Trigonometry":[
-["sin θ equals?","Perpendicular/Hypotenuse"],
-["cos θ equals?","Base/Hypotenuse"],
-["tan θ equals?","Perpendicular/Base"],
-["1+tan²θ equals?","sec²θ"],
-["sin²θ+cos²θ equals?","1"],
-["cosec θ is reciprocal of?","sin θ"],
-["sec θ is reciprocal of?","cos θ"],
-["cot θ is reciprocal of?","tan θ"],
-["tan θ equals?","sin θ/cos θ"],
-["sin 30° equals?","1/2"]
-],
-
-"Some Applications of Trigonometry":[
-["Angle looking upward is?","Angle of elevation"],
-["Angle looking downward is?","Angle of depression"],
-["Height-distance problems use?","Trigonometry"],
-["A common ratio is?","tan"],
-["A tower problem requires a?","Right triangle"],
-["Horizontal distance is often?","Base"],
-["Vertical height is often?","Perpendicular"],
-["Always draw a?","Diagram"],
-["Angle of elevation is measured from?","Horizontal"],
-["Shadow problems involve?","Height and distance"]
-],
-
-"Circles":[
-["A tangent touches circle at?","One point"],
-["Radius at contact is?","Perpendicular to tangent"],
-["Tangents from same external point are?","Equal"],
-["Point where tangent touches is?","Point of contact"],
-["A circle has?","Infinite points"],
-["Radius joins center to?","Point on circle"],
-["Diameter is?","2r"],
-["Tangent theorem uses?","Radius"],
-["External point can have?","Two tangents"],
-["Tangents are?","Equal in length"]
-],
-
-"Areas Related to Circles":[
-["Area of circle is?","πr²"],
-["Circumference is?","2πr"],
-["Area of sector uses?","θ/360"],
-["Arc length uses?","θ/360"],
-["Diameter equals?","2r"],
-["Radius is half of?","Diameter"],
-["Semicircle angle is?","180°"],
-["Full circle angle is?","360°"],
-["Area unit is?","Square unit"],
-["Circumference unit is?","Linear unit"]
-],
-
-"Surface Areas and Volumes":[
-["Volume of cylinder is?","πr²h"],
-["Volume of sphere is?","4/3πr³"],
-["Volume of cone is?","1/3πr²h"],
-["Cube volume is?","a³"],
-["Cuboid volume is?","lbh"],
-["Surface area measures?","Outer area"],
-["Volume measures?","Space occupied"],
-["CSA means?","Curved Surface Area"],
-["TSA means?","Total Surface Area"],
-["1 litre equals?","1000 cm³"]
-],
-
-"Statistics":[
-["Mean is a measure of?","Central tendency"],
-["Median is?","Middle value"],
-["Mode is?","Most frequent value"],
-["Cumulative frequency is used for?","Median"],
-["Grouped data uses?","Class intervals"],
-["Highest frequency class is?","Modal class"],
-["Mean is calculated using?","Frequencies and values"],
-["Median divides data into?","Two equal parts"],
-["Mode represents?","Most frequent observation"],
-["Statistics deals with?","Data"]
-],
-
-"Probability":[
-["Probability lies between?","0 and 1"],
-["Impossible event probability is?","0"],
-["Sure event probability is?","1"],
-["P(E) equals?","Favourable/Total outcomes"],
-["Complement is?","1-P(E)"],
-["A coin has how many outcomes?","2"],
-["A standard die has?","6 outcomes"],
-["Probability of an event cannot be?","Greater than 1"],
-["Favourable outcomes are?","Desired outcomes"],
-["Probability measures?","Chance"]
 ]
 
 };
 
-
-/* =========================================================
-QUIZ CHAPTER PAGE
-========================================================= */
-
 function openQuizChapterPage(){
 
-    createChapterCards(
-        "quizChapterGrid",
-        startQuiz
-    );
+createChapterCards(
+"quizChapterGrid",
+startQuiz
+);
 
-    openMainPage(
-        "quizChapterPage"
-    );
+openMainPage("quizChapterPage");
 
 }
-
-
-/* =========================================================
-START QUIZ
-========================================================= */
 
 function startQuiz(index){
 
-    quizChapterIndex=index;
+quizChapterIndex=index;
+quizQuestionIndex=0;
+quizScore=0;
+quizAnswered=false;
 
-    quizQuestionIndex=0;
+document.getElementById("quizTitle")
+.textContent=chapters[index].name+" Quiz";
 
-    quizScore=0;
+openMainPage("quizPage");
 
-    quizAnswered=false;
-
-    document
-    .getElementById("quizTitle")
-    .textContent=
-    chapters[index].name+" Quiz";
-
-    openMainPage("quizPage");
-
-    renderQuizQuestion();
+renderQuizQuestion();
 
 }
-
-
-/* =========================================================
-RENDER QUIZ
-========================================================= */
 
 function renderQuizQuestion(){
 
-    const chapter=
-    chapters[quizChapterIndex].name;
+const chapter=chapters[quizChapterIndex].name;
+const questions=quizData[chapter];
+const box=document.getElementById("quizBox");
 
-    const questions=
-    quizData[chapter];
+if(!questions){
 
-    const box=
-    document.getElementById("quizBox");
+box.innerHTML=`
 
-    if(!questions){
+<div class="quiz-card quiz-result">
 
-        box.innerHTML=`
+<div class="result-icon">🚧</div>
 
-        <div class="quiz-card quiz-result">
+<h2>Quiz Coming Soon</h2>
 
-            <div class="result-icon">
-                🚧
-            </div>
+<p class="result-message">
+Questions for this chapter will be added soon.
+</p>
 
-            <h2>
-                Quiz Coming Soon
-            </h2>
+</div>
 
-            <p class="result-message">
-                Questions for this chapter will be added soon.
-            </p>
+`;
 
-        </div>
-
-        `;
-
-        return;
-    }
-
-
-    if(quizQuestionIndex>=10){
-
-        showQuizResult();
-
-        return;
-    }
-
-
-    const q=
-    questions[quizQuestionIndex];
-
-    let options=[
-        q[1],
-        "None of these",
-        "Cannot be determined",
-        "All of these"
-    ];
-
-
-    /*
-    Make answer position different
-    for different questions.
-    */
-
-    const shift=
-    quizQuestionIndex%4;
-
-    options=[
-        options[shift],
-        options[(shift+1)%4],
-        options[(shift+2)%4],
-        options[(shift+3)%4]
-    ];
-
-
-    box.innerHTML=`
-
-        <div class="quiz-top">
-
-            <div class="quiz-progress-text">
-                QUESTION
-                ${quizQuestionIndex+1}
-                / 10
-            </div>
-
-            <div class="quiz-score">
-                SCORE: ${quizScore}
-            </div>
-
-        </div>
-
-
-        <div class="quiz-progress">
-
-            <div
-            class="quiz-progress-fill"
-            style="
-            width:${(quizQuestionIndex/10)*100}%
-            "
-            ></div>
-
-        </div>
-
-
-        <div class="quiz-card">
-
-            <div class="quiz-question-number">
-                QUESTION ${quizQuestionIndex+1}
-            </div>
-
-            <div class="quiz-question">
-                ${q[0]}
-            </div>
-
-            <div
-            class="quiz-options"
-            id="quizOptions"
-            >
-
-            ${options.map((option,i)=>`
-
-                <button
-                class="quiz-option"
-                onclick="selectQuizAnswer(
-                    this,
-                    '${escapeQuotes(option)}',
-                    '${escapeQuotes(q[1])}'
-                )"
-                >
-                    ${String.fromCharCode(65+i)}.
-                    ${option}
-                </button>
-
-            `).join("")}
-
-            </div>
-
-            <button
-            id="quizNext"
-            class="quiz-next hidden"
-            onclick="nextQuizQuestion()"
-            >
-                NEXT QUESTION →
-            </button>
-
-        </div>
-
-    `;
+return;
 
 }
 
+if(quizQuestionIndex>=10){
 
-function escapeQuotes(text){
-
-    return text
-    .replace(/\\/g,"\\\\")
-    .replace(/'/g,"\\'")
-    .replace(/"/g,'&quot;');
+showQuizResult();
+return;
 
 }
 
+const q=questions[quizQuestionIndex];
 
-/* =========================================================
-SELECT ANSWER
-========================================================= */
+let options=[
+q[1],
+"None of these",
+"Cannot be determined",
+"All of these"
+];
+
+const shift=quizQuestionIndex%4;
+
+options=[
+options[shift],
+options[(shift+1)%4],
+options[(shift+2)%4],
+options[(shift+3)%4]
+];
+
+box.innerHTML=`
+
+<div class="quiz-top">
+
+<div class="quiz-progress-text">
+QUESTION ${quizQuestionIndex+1} / 10
+</div>
+
+<div class="quiz-score">
+SCORE: ${quizScore}
+</div>
+
+</div>
+
+<div class="quiz-progress">
+
+<div
+class="quiz-progress-fill"
+style="width:${(quizQuestionIndex/10)*100}%"
+></div>
+
+</div>
+
+<div class="quiz-card">
+
+<div class="quiz-question-number">
+QUESTION ${quizQuestionIndex+1}
+</div>
+
+<div class="quiz-question">
+${q[0]}
+</div>
+
+<div class="quiz-options">
+
+${options.map((option,i)=>`
+
+<button
+class="quiz-option"
+onclick="selectQuizAnswer(this,'${option}','${q[1]}')"
+>
+${String.fromCharCode(65+i)}. ${option}
+</button>
+
+`).join("")}
+
+</div>
+
+<button
+id="quizNext"
+class="quiz-next hidden"
+onclick="nextQuizQuestion()"
+>
+NEXT QUESTION →
+</button>
+
+</div>
+
+`;
+
+}
 
 function selectQuizAnswer(button,selected,correct){
 
-    if(quizAnswered) return;
+if(quizAnswered)return;
 
-    quizAnswered=true;
+quizAnswered=true;
 
-    const buttons=
-    document
-    .querySelectorAll(".quiz-option");
+const buttons=document.querySelectorAll(".quiz-option");
 
-    buttons.forEach(btn=>{
-        btn.disabled=true;
-    });
+buttons.forEach(btn=>{
+btn.disabled=true;
+});
 
+if(selected===correct){
 
-    if(selected===correct){
+button.classList.add("correct");
+quizScore++;
 
-        button.classList.add("correct");
+}else{
 
-        quizScore++;
+button.classList.add("wrong");
 
-    }else{
+buttons.forEach(btn=>{
 
-        button.classList.add("wrong");
-
-        buttons.forEach(btn=>{
-
-            if(
-            btn.textContent
-            .trim()
-            .endsWith(correct)
-            ){
-
-                btn.classList.add("correct");
-
-            }
-
-        });
-
-    }
-
-
-    document
-    .getElementById("quizNext")
-    .classList.remove("hidden");
-
+if(btn.textContent.trim().endsWith(correct)){
+btn.classList.add("correct");
 }
-
-
-function nextQuizQuestion(){
-
-    quizQuestionIndex++;
-
-    quizAnswered=false;
-
-    renderQuizQuestion();
-
-}
-
-
-function showQuizResult(){
-
-    const percentage=
-    quizScore*10;
-
-    let icon="📚";
-    let message=
-    "Keep practising. You can improve your score!";
-
-    if(percentage>=90){
-
-        icon="🏆";
-
-        message=
-        "Outstanding! Your preparation is excellent.";
-
-    }else if(percentage>=70){
-
-        icon="🔥";
-
-        message=
-        "Great work! Keep revising to reach the top.";
-
-    }else if(percentage>=50){
-
-        icon="💪";
-
-        message=
-        "Good attempt. Revise the key points and try again.";
-
-    }
-
-
-    document
-    .getElementById("quizBox")
-    .innerHTML=`
-
-        <div class="quiz-card quiz-result">
-
-            <div class="result-icon">
-                ${icon}
-            </div>
-
-            <h2>
-                Quiz Completed!
-            </h2>
-
-            <div class="result-score">
-                ${quizScore}/10
-            </div>
-
-            <p class="result-message">
-                You scored <strong>${percentage}%</strong>.
-                <br><br>
-                ${message}
-            </p>
-
-            <button
-            class="quiz-next"
-            onclick="startQuiz(${quizChapterIndex})"
-            >
-                🔄 RETAKE QUIZ
-            </button>
-
-        </div>
-
-    `;
-
-}
-
-
-/* =========================================================
-NOTEBOOK
-========================================================= */
-
-function getCurrentUser(){
-
-    return localStorage.getItem(
-        "mathsMasterLoggedUser"
-    ) || "Student";
-
-}
-
-
-function getNotesKey(){
-
-    return "mathsMasterNotes_"+
-    getCurrentUser().toLowerCase();
-
-}
-
-
-function saveNote(){
-
-    const title=
-    document
-    .getElementById("noteTitle")
-    .value.trim();
-
-    const body=
-    document
-    .getElementById("noteBody")
-    .value.trim();
-
-    if(title==="" && body===""){
-
-        alert("Please write something before saving.");
-
-        return;
-
-    }
-
-
-    const notes=
-    JSON.parse(
-        localStorage.getItem(
-            getNotesKey()
-        ) || "[]"
-    );
-
-
-    notes.unshift({
-
-        id:Date.now(),
-
-        title:
-        title || "Untitled Note",
-
-        body:body,
-
-        date:
-        new Date().toLocaleString()
-
-    });
-
-
-    localStorage.setItem(
-        getNotesKey(),
-        JSON.stringify(notes)
-    );
-
-
-    document
-    .getElementById("noteTitle")
-    .value="";
-
-    document
-    .getElementById("noteBody")
-    .value="";
-
-
-    renderNotes();
-
-}
-
-
-function renderNotes(){
-
-    const container=
-    document
-    .getElementById("notesList");
-
-    const notes=
-    JSON.parse(
-        localStorage.getItem(
-            getNotesKey()
-        ) || "[]"
-    );
-
-
-    if(notes.length===0){
-
-        container.innerHTML=`
-
-        <div class="empty">
-
-            <div class="empty-icon">
-                📓
-            </div>
-
-            <p>
-                No notes yet.
-                Start writing your revision notes.
-            </p>
-
-        </div>
-
-        `;
-
-        return;
-
-    }
-
-
-    container.innerHTML="";
-
-
-    notes.forEach(note=>{
-
-        const card=
-        document.createElement("div");
-
-        card.className="saved-note";
-
-        card.innerHTML=`
-
-            <h3>
-                ${escapeHTML(note.title)}
-            </h3>
-
-            <p>
-                ${escapeHTML(note.body)}
-            </p>
-
-            <small>
-                ${escapeHTML(note.date)}
-            </small>
-
-            <div class="note-actions">
-
-                <button
-                class="delete-note"
-                onclick="deleteNote(${note.id})"
-                >
-                    🗑 DELETE
-                </button>
-
-            </div>
-
-        `;
-
-        container.appendChild(card);
-
-    });
-
-}
-
-
-function deleteNote(id){
-
-    let notes=
-    JSON.parse(
-        localStorage.getItem(
-            getNotesKey()
-        ) || "[]"
-    );
-
-
-    notes=
-    notes.filter(
-        note=>note.id!==id
-    );
-
-
-    localStorage.setItem(
-        getNotesKey(),
-        JSON.stringify(notes)
-    );
-
-
-    renderNotes();
-
-}
-
-
-function escapeHTML(text){
-
-    return text
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
-
-}
-
-
-/* =========================================================
-ENTER KEY SUPPORT
-========================================================= */
-
-document.addEventListener(
-"keydown",
-event=>{
-
-    if(event.key!=="Enter")
-    return;
-
-
-    const active=
-    document.querySelector(
-        "#loginSystem .screen.active"
-    );
-
-
-    if(!active)
-    return;
-
-
-    if(active.id==="nameScreen")
-        checkName();
-
-    else if(
-        active.id==="createPasswordScreen"
-    )
-        createAccount();
-
-    else if(
-        active.id==="loginScreen"
-    )
-        loginUser();
 
 });
 
+}
 
-/* =========================================================
-INITIALIZE
-========================================================= */
+document.getElementById("quizNext")
+.classList.remove("hidden");
 
-window.addEventListener(
-"load",
-()=>{
+}
 
-    createChapterCards(
-        "keyChapterGrid",
-        openLesson
-    );
+function nextQuizQuestion(){
 
-    createMarksGrid();
+quizQuestionIndex++;
+quizAnswered=false;
+renderQuizQuestion();
 
-    createChoiceList();
+}
 
-    createChapterCards(
-        "quizChapterGrid",
-        startQuiz
-    );
+function showQuizResult(){
 
-    renderNotes();
+const percentage=quizScore*10;
 
+let icon="📚";
+let message="Keep practising. You can improve your score!";
 
-    const user=
-    localStorage.getItem(
-        "mathsMasterLoggedUser"
-    );
+if(percentage>=90){
 
+icon="🏆";
+message="Outstanding! Your preparation is excellent.";
 
-    if(user){
+}else if(percentage>=70){
 
-        document
-        .getElementById("username")
-        .textContent=user;
+icon="🔥";
+message="Great work! Keep revising to reach the top.";
 
-        document
-        .getElementById("heroUsername")
-        .textContent=user;
+}else if(percentage>=50){
 
-    }
+icon="💪";
+message="Good attempt. Revise the key points and try again.";
+
+}
+
+document.getElementById("quizBox").innerHTML=`
+
+<div class="quiz-card quiz-result">
+
+<div class="result-icon">
+${icon}
+</div>
+
+<h2>
+Quiz Completed!
+</h2>
+
+<div class="result-score">
+${quizScore}/10
+</div>
+
+<p class="result-message">
+You scored <strong>${percentage}%</strong>.
+<br><br>
+${message}
+</p>
+
+<button
+class="quiz-next"
+onclick="startQuiz(${quizChapterIndex})"
+>
+🔄 RETAKE QUIZ
+</button>
+
+</div>
+
+`;
+
+}
+
+function getCurrentUser(){
+
+return localStorage.getItem(
+"mathsMasterLoggedUser"
+)||"Student";
+
+}
+
+function getNotesKey(){
+
+return "mathsMasterNotes_"+
+getCurrentUser().toLowerCase();
+
+}
+
+function saveNote(){
+
+const title=document.getElementById("noteTitle").value.trim();
+const body=document.getElementById("noteBody").value.trim();
+
+if(title===""&&body===""){
+
+alert("Please write something before saving.");
+return;
+
+}
+
+const notes=JSON.parse(
+localStorage.getItem(getNotesKey())||"[]"
+);
+
+notes.unshift({
+
+id:Date.now(),
+title:title||"Untitled Note",
+body:body,
+date:new Date().toLocaleString()
+
+});
+
+localStorage.setItem(
+getNotesKey(),
+JSON.stringify(notes)
+);
+
+document.getElementById("noteTitle").value="";
+document.getElementById("noteBody").value="";
+
+renderNotes();
+
+}
+
+function renderNotes(){
+
+const container=document.getElementById("notesList");
+
+if(!container)return;
+
+const notes=JSON.parse(
+localStorage.getItem(getNotesKey())||"[]"
+);
+
+if(notes.length===0){
+
+container.innerHTML=`
+
+<div class="empty">
+
+<div class="empty-icon">
+📓
+</div>
+
+<p>
+No notes yet.
+Start writing your revision notes.
+</p>
+
+</div>
+
+`;
+
+return;
+
+}
+
+container.innerHTML="";
+
+notes.forEach(note=>{
+
+const card=document.createElement("div");
+
+card.className="saved-note";
+
+card.innerHTML=`
+
+<h3>
+${escapeHTML(note.title)}
+</h3>
+
+<p>
+${escapeHTML(note.body)}
+</p>
+
+<small>
+${escapeHTML(note.date)}
+</small>
+
+<div class="note-actions">
+
+<button
+class="delete-note"
+onclick="deleteNote(${note.id})"
+>
+🗑 DELETE
+</button>
+
+</div>
+
+`;
+
+container.appendChild(card);
+
+});
+
+}
+
+function deleteNote(id){
+
+let notes=JSON.parse(
+localStorage.getItem(getNotesKey())||"[]"
+);
+
+notes=notes.filter(note=>note.id!==id);
+
+localStorage.setItem(
+getNotesKey(),
+JSON.stringify(notes)
+);
+
+renderNotes();
+
+}
+
+function escapeHTML(text){
+
+return text
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
+
+}
+
+document.addEventListener("keydown",event=>{
+
+if(event.key!=="Enter")return;
+
+const active=document.querySelector(
+"#loginSystem .screen.active"
+);
+
+if(!active)return;
+
+if(active.id==="nameScreen")
+checkName();
+
+else if(active.id==="createPasswordScreen")
+createAccount();
+
+else if(active.id==="loginScreen")
+loginUser();
+
+});
+
+window.addEventListener("load",()=>{
+
+createChapterCards(
+"keyChapterGrid",
+openLesson
+);
+
+createMarksGrid();
+
+createChoiceList();
+
+createChapterCards(
+"quizChapterGrid",
+startQuiz
+);
+
+renderNotes();
+
+const user=localStorage.getItem(
+"mathsMasterLoggedUser"
+);
+
+if(user){
+
+document.getElementById("username").textContent=user;
+document.getElementById("heroUsername").textContent=user;
+
+}
 
 });
 
